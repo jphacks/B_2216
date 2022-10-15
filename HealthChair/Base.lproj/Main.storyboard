@@ -43,9 +43,9 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="y05-Hc-jhz">
-                                        <rect key="frame" x="294" y="1" width="48" height="46.666666666666671"/>
-                                        <color key="tintColor" systemColor="systemGray4Color"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gearshape.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="y05-Hc-jhz">
+                                        <rect key="frame" x="294" y="0.33333333333333215" width="48" height="47.333333333333343"/>
+                                        <color key="tintColor" systemColor="systemGray2Color"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="LAe-ct-P2f"/>
                                             <constraint firstAttribute="height" constant="48" id="NW4-qP-tUJ"/>
@@ -285,16 +285,13 @@
         <image name="SittingMan" width="626" height="413"/>
         <image name="chair" catalog="system" width="104" height="128"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
-        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="scalemass" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

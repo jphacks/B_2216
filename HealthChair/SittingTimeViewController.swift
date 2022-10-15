@@ -15,14 +15,21 @@ class SittingTimeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setUpGraph()
+    }
+
+    func setUpGraph(){
         let rawData: [Int] = [20, 50, 70, 30, 60, 90, 40, 0, 0, 0, 0, 0, 20, 50, 70, 30, 60, 90, 40, 0, 0, 0, 0, 0]
         let entries = rawData.enumerated().map { BarChartDataEntry(x: Double($0.offset), y: Double($0.element)) }
         let dataSet = BarChartDataSet(entries: entries)
         dataSet.drawValuesEnabled = false
+        dataSet.colors = [.systemOrange]
         
         let data = BarChartData(dataSet: dataSet)
         barChartView.data = data
-
+        
+        barChartView.setScaleEnabled(false)
+        
         barChartView.xAxis.labelPosition = .bottom
         barChartView.xAxis.labelTextColor = .systemGray3
         barChartView.xAxis.gridColor = .systemGray3
@@ -36,8 +43,6 @@ class SittingTimeViewController: UIViewController {
         
         barChartView.legend.enabled = false
     }
-    
-
     /*
     // MARK: - Navigation
 
@@ -48,4 +53,10 @@ class SittingTimeViewController: UIViewController {
     }
     */
 
+}
+
+extension SittingTimeViewController: ChartViewDelegate {
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        print(entry)
+    }
 }
