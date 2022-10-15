@@ -6,13 +6,35 @@
 //
 
 import UIKit
+import Charts
 
 class SittingTimeViewController: UIViewController {
+    @IBOutlet var barChartView: BarChartView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let rawData: [Int] = [20, 50, 70, 30, 60, 90, 40, 0, 0, 0, 0, 0, 20, 50, 70, 30, 60, 90, 40, 0, 0, 0, 0, 0]
+        let entries = rawData.enumerated().map { BarChartDataEntry(x: Double($0.offset), y: Double($0.element)) }
+        let dataSet = BarChartDataSet(entries: entries)
+        dataSet.drawValuesEnabled = false
+        
+        let data = BarChartData(dataSet: dataSet)
+        barChartView.data = data
+
+        barChartView.xAxis.labelPosition = .bottom
+        barChartView.xAxis.labelTextColor = .systemGray3
+        barChartView.xAxis.gridColor = .systemGray3
+        barChartView.xAxis.drawAxisLineEnabled = false
+        barChartView.xAxis.labelFont = .boldSystemFont(ofSize: 14)
+        
+        barChartView.leftAxis.enabled = false
+        barChartView.rightAxis.labelTextColor = .systemGray3
+        barChartView.rightAxis.gridColor = .systemGray3
+        barChartView.rightAxis.labelFont = .boldSystemFont(ofSize: 14)
+        
+        barChartView.legend.enabled = false
     }
     
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet var sittingCardView: UIView!
     @IBOutlet var weightCardView: UIView!
@@ -17,18 +17,21 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         setup()
+
+        sittingCardView.addGestureRecognizer(
+            UITapGestureRecognizer(
+                target: self,
+                action: #selector(self.sittingCardViewTapped(_:))))
     }
 
-    func setup(){
+    func setup() {
         sittingCardView.layer.cornerRadius = 10
         weightCardView.layer.cornerRadius = 10
     }
-    
-    @IBAction func showSittingTimeView(){
-        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
-        self.present(secondViewController, animated: true, completion: nil)
 
+    @objc func sittingCardViewTapped(_ sender: UITapGestureRecognizer) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "SittingTimeViewController", bundle: nil)
+        let sittingTimeViewController = storyboard.instantiateViewController(withIdentifier: "SittingTimeViewController") as! SittingTimeViewController
+        self.show(sittingTimeViewController, sender: nil)
     }
-
 }
-

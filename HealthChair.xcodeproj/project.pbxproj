@@ -13,6 +13,7 @@
 		C52D13B928EDEC3700D44472 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52D13B728EDEC3700D44472 /* Main.storyboard */; };
 		C52D13BB28EDEC3800D44472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52D13BA28EDEC3800D44472 /* Assets.xcassets */; };
 		C52D13BE28EDEC3800D44472 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52D13BC28EDEC3800D44472 /* LaunchScreen.storyboard */; };
+		C58B620028FAC1E600DFCDDB /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = C58B61FF28FAC1E600DFCDDB /* Charts */; };
 		C593B56D28F16A7C006C10AC /* SittingTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C593B56C28F16A7C006C10AC /* SittingTimeViewController.swift */; };
 		C593B56F28F16A9F006C10AC /* SittingTimeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C593B56E28F16A9F006C10AC /* SittingTimeViewController.storyboard */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C58B620028FAC1E600DFCDDB /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,9 @@
 			dependencies = (
 			);
 			name = HealthChair;
+			packageProductDependencies = (
+				C58B61FF28FAC1E600DFCDDB /* Charts */,
+			);
 			productName = HealthChair;
 			productReference = C52D13AE28EDEC3700D44472 /* HealthChair.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +122,9 @@
 				Base,
 			);
 			mainGroup = C52D13A528EDEC3700D44472;
+			packageReferences = (
+				C58B61FE28FAC1E600DFCDDB /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = C52D13AF28EDEC3700D44472 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -303,6 +311,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,6 +340,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,6 +376,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C58B61FE28FAC1E600DFCDDB /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C58B61FF28FAC1E600DFCDDB /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C58B61FE28FAC1E600DFCDDB /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C52D13A628EDEC3700D44472 /* Project object */;
 }
