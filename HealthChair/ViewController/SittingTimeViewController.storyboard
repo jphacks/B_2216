@@ -28,6 +28,9 @@
                                             <segment title="6か月"/>
                                             <segment title="年"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="segmentedControlSwitched:" destination="H7e-8J-E7d" eventType="valueChanged" id="ChK-6G-v4h"/>
+                                        </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合計" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWe-A4-bUg">
                                         <rect key="frame" x="24" y="55" width="28.666666666666671" height="17"/>

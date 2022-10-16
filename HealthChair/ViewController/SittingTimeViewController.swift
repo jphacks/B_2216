@@ -18,7 +18,6 @@ class SittingTimeViewController: UIViewController {
         navigationItem.title = "座った時間"
         
         setUpGraph()
-        barChartView.delegate = self
     }
 
     func setUpGraph(){
@@ -52,34 +51,14 @@ class SittingTimeViewController: UIViewController {
     }
     
     func getRawData() -> [Int] {
-        guard let url = Bundle.main.url(forResource: "sample_dairy", withExtension: "json") else {
-            fatalError("ファイルが見つからない")
-        }
-        guard let data = try? Data(contentsOf: url) else {
-            fatalError("ファイル読み込みエラー")
-        }
+        guard let url = Bundle.main.url(forResource: "sample_dairy", withExtension: "json") else { fatalError("ファイルが見つからない") }
+        guard let data = try? Data(contentsOf: url) else { fatalError("ファイル読み込みエラー") }
         let decoder = JSONDecoder()
-        guard let response = try? decoder.decode(DairyData.self, from: data) else {
-            fatalError("JSON読み込みエラー")
-        }
-         
+        guard let response = try? decoder.decode(DairyData.self, from: data) else { fatalError("JSON読み込みエラー") }
         return response.datas
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-
-extension SittingTimeViewController: ChartViewDelegate {
-    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
-        print(entry)
+    @IBAction func segmentedControlSwitched(_ sender: UISegmentedControl) {
+        print(sender.titleForSegment(at: sender.selectedSegmentIndex)!)
     }
 }
