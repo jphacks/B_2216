@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C514E3B628FBCC0500BBB4E6 /* sample_dairy.json in Resources */ = {isa = PBXBuildFile; fileRef = C514E3B428FBC97C00BBB4E6 /* sample_dairy.json */; };
+		C514E3B928FBDCF500BBB4E6 /* DairyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514E3B828FBDCF500BBB4E6 /* DairyData.swift */; };
 		C52D13B228EDEC3700D44472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D13B128EDEC3700D44472 /* AppDelegate.swift */; };
 		C52D13B428EDEC3700D44472 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D13B328EDEC3700D44472 /* SceneDelegate.swift */; };
 		C52D13B628EDEC3700D44472 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D13B528EDEC3700D44472 /* MainViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C514E3B428FBC97C00BBB4E6 /* sample_dairy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sample_dairy.json; sourceTree = "<group>"; };
+		C514E3B828FBDCF500BBB4E6 /* DairyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DairyData.swift; sourceTree = "<group>"; };
 		C52D13AE28EDEC3700D44472 /* HealthChair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthChair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C52D13B128EDEC3700D44472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C52D13B328EDEC3700D44472 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C514E3B528FBCBBE00BBB4E6 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C514E3B428FBC97C00BBB4E6 /* sample_dairy.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		C514E3B728FBDCDA00BBB4E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C514E3B828FBDCF500BBB4E6 /* DairyData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C52D13A528EDEC3700D44472 = {
 			isa = PBXGroup;
 			children = (
@@ -62,17 +82,27 @@
 		C52D13B028EDEC3700D44472 /* HealthChair */ = {
 			isa = PBXGroup;
 			children = (
-				C593B56C28F16A7C006C10AC /* SittingTimeViewController.swift */,
+				C514E3B728FBDCDA00BBB4E6 /* Model */,
+				C59A2E9028FB08D7009EBC43 /* ViewController */,
 				C52D13B128EDEC3700D44472 /* AppDelegate.swift */,
 				C52D13B328EDEC3700D44472 /* SceneDelegate.swift */,
-				C52D13B528EDEC3700D44472 /* MainViewController.swift */,
-				C52D13B728EDEC3700D44472 /* Main.storyboard */,
 				C52D13BA28EDEC3800D44472 /* Assets.xcassets */,
 				C52D13BC28EDEC3800D44472 /* LaunchScreen.storyboard */,
 				C52D13BF28EDEC3800D44472 /* Info.plist */,
-				C593B56E28F16A9F006C10AC /* SittingTimeViewController.storyboard */,
+				C514E3B528FBCBBE00BBB4E6 /* Resource */,
 			);
 			path = HealthChair;
+			sourceTree = "<group>";
+		};
+		C59A2E9028FB08D7009EBC43 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C52D13B728EDEC3700D44472 /* Main.storyboard */,
+				C52D13B528EDEC3700D44472 /* MainViewController.swift */,
+				C593B56E28F16A9F006C10AC /* SittingTimeViewController.storyboard */,
+				C593B56C28F16A7C006C10AC /* SittingTimeViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +169,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C514E3B628FBCC0500BBB4E6 /* sample_dairy.json in Resources */,
 				C52D13BE28EDEC3800D44472 /* LaunchScreen.storyboard in Resources */,
 				C52D13BB28EDEC3800D44472 /* Assets.xcassets in Resources */,
 				C52D13B928EDEC3700D44472 /* Main.storyboard in Resources */,
@@ -154,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C52D13B628EDEC3700D44472 /* MainViewController.swift in Sources */,
+				C514E3B928FBDCF500BBB4E6 /* DairyData.swift in Sources */,
 				C52D13B228EDEC3700D44472 /* AppDelegate.swift in Sources */,
 				C593B56D28F16A7C006C10AC /* SittingTimeViewController.swift in Sources */,
 				C52D13B428EDEC3700D44472 /* SceneDelegate.swift in Sources */,

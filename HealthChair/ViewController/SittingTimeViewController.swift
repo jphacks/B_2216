@@ -15,11 +15,15 @@ class SittingTimeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        navigationItem.title = "座った時間"
+        
         setUpGraph()
+        barChartView.delegate = self
     }
 
     func setUpGraph(){
-        let rawData: [Int] = [20, 50, 70, 30, 60, 90, 40, 0, 0, 0, 0, 0, 20, 50, 70, 30, 60, 90, 40, 0, 0, 0, 0, 0]
+        let rawData: [Int] = getRawData()
+        // let rawData: [Int] = [20, 50, 70, 30, 60, 90, 40, 0, 0, 0, 0, 0, 20, 50, 70, 30, 60, 90, 40, 0, 0, 0, 0, 0]
         let entries = rawData.enumerated().map { BarChartDataEntry(x: Double($0.offset), y: Double($0.element)) }
         let dataSet = BarChartDataSet(entries: entries)
         dataSet.drawValuesEnabled = false
@@ -29,6 +33,9 @@ class SittingTimeViewController: UIViewController {
         barChartView.data = data
         
         barChartView.setScaleEnabled(false)
+        barChartView.highlightFullBarEnabled = false
+        barChartView.highlightPerDragEnabled = false
+        barChartView.highlightPerTapEnabled = false
         
         barChartView.xAxis.labelPosition = .bottom
         barChartView.xAxis.labelTextColor = .systemGray3
@@ -43,6 +50,22 @@ class SittingTimeViewController: UIViewController {
         
         barChartView.legend.enabled = false
     }
+    
+    func getRawData() -> [Int] {
+        guard let url = Bundle.main.url(forResource: "sample_dairy", withExtension: "json") else {
+            fatalError("ファイルが見つからない")
+        }
+        guard let data = try? Data(contentsOf: url) else {
+            fatalError("ファイル読み込みエラー")
+        }
+        let decoder = JSONDecoder()
+        guard let response = try? decoder.decode(DairyData.self, from: data) else {
+            fatalError("JSON読み込みエラー")
+        }
+         
+        return response.datas
+    }
+    
     /*
     // MARK: - Navigation
 
