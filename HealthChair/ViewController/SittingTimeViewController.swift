@@ -15,9 +15,11 @@ class SittingTimeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        navigationItem.title = "座った時間"
-        
         setUpGraph()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.title = "座った時間"
     }
 
     func setUpGraph(){
@@ -48,6 +50,8 @@ class SittingTimeViewController: UIViewController {
         barChartView.rightAxis.labelFont = .boldSystemFont(ofSize: 14)
         
         barChartView.legend.enabled = false
+        
+        barChartView.animate(yAxisDuration: 1, easingOption: .easeOutBack)
     }
     
     func getRawData() -> [Int] {

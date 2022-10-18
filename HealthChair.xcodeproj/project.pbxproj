@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C514E3B628FBCC0500BBB4E6 /* sample_dairy.json in Resources */ = {isa = PBXBuildFile; fileRef = C514E3B428FBC97C00BBB4E6 /* sample_dairy.json */; };
 		C514E3B928FBDCF500BBB4E6 /* DairyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514E3B828FBDCF500BBB4E6 /* DairyData.swift */; };
+		C514E3BB28FC520000BBB4E6 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514E3BA28FC520000BBB4E6 /* WeightViewController.swift */; };
+		C514E3BD28FC521500BBB4E6 /* WeightViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C514E3BC28FC521500BBB4E6 /* WeightViewController.storyboard */; };
 		C52D13B228EDEC3700D44472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D13B128EDEC3700D44472 /* AppDelegate.swift */; };
 		C52D13B428EDEC3700D44472 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D13B328EDEC3700D44472 /* SceneDelegate.swift */; };
 		C52D13B628EDEC3700D44472 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D13B528EDEC3700D44472 /* MainViewController.swift */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		C514E3B428FBC97C00BBB4E6 /* sample_dairy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sample_dairy.json; sourceTree = "<group>"; };
 		C514E3B828FBDCF500BBB4E6 /* DairyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DairyData.swift; sourceTree = "<group>"; };
+		C514E3BA28FC520000BBB4E6 /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
+		C514E3BC28FC521500BBB4E6 /* WeightViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeightViewController.storyboard; sourceTree = "<group>"; };
 		C52D13AE28EDEC3700D44472 /* HealthChair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthChair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C52D13B128EDEC3700D44472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C52D13B328EDEC3700D44472 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,10 +101,12 @@
 		C59A2E9028FB08D7009EBC43 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C52D13B728EDEC3700D44472 /* Main.storyboard */,
 				C52D13B528EDEC3700D44472 /* MainViewController.swift */,
-				C593B56E28F16A9F006C10AC /* SittingTimeViewController.storyboard */,
+				C52D13B728EDEC3700D44472 /* Main.storyboard */,
 				C593B56C28F16A7C006C10AC /* SittingTimeViewController.swift */,
+				C593B56E28F16A9F006C10AC /* SittingTimeViewController.storyboard */,
+				C514E3BA28FC520000BBB4E6 /* WeightViewController.swift */,
+				C514E3BC28FC521500BBB4E6 /* WeightViewController.storyboard */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -172,6 +178,7 @@
 				C514E3B628FBCC0500BBB4E6 /* sample_dairy.json in Resources */,
 				C52D13BE28EDEC3800D44472 /* LaunchScreen.storyboard in Resources */,
 				C52D13BB28EDEC3800D44472 /* Assets.xcassets in Resources */,
+				C514E3BD28FC521500BBB4E6 /* WeightViewController.storyboard in Resources */,
 				C52D13B928EDEC3700D44472 /* Main.storyboard in Resources */,
 				C593B56F28F16A9F006C10AC /* SittingTimeViewController.storyboard in Resources */,
 			);
@@ -184,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C514E3BB28FC520000BBB4E6 /* WeightViewController.swift in Sources */,
 				C52D13B628EDEC3700D44472 /* MainViewController.swift in Sources */,
 				C514E3B928FBDCF500BBB4E6 /* DairyData.swift in Sources */,
 				C52D13B228EDEC3700D44472 /* AppDelegate.swift in Sources */,
