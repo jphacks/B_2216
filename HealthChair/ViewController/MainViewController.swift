@@ -12,13 +12,13 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet var sittingCardView: UIView!
     @IBOutlet var weightCardView: UIView!
     @IBOutlet var realtimeCardView: UIView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         setup()
-
+        
         sittingCardView.addGestureRecognizer(
             UITapGestureRecognizer(
                 target: self,
@@ -28,9 +28,10 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
             UITapGestureRecognizer(
                 target: self,
                 action: #selector(self.weightCardViewTapped(_:))))
+        
         navigationItem.backBarButtonItem = .init(title: "概要", style: .plain, target: nil, action: nil)
     }
-
+    
     func setup() {
         sittingCardView.layer.cornerRadius = 16
         weightCardView.layer.cornerRadius = 16
@@ -44,9 +45,14 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @objc func weightCardViewTapped(_ sender: UITapGestureRecognizer) {
-        print("weightViewController called")
         let storyboard: UIStoryboard = UIStoryboard(name: "WeightViewController", bundle: nil)
         let weightViewController = storyboard.instantiateViewController(withIdentifier: "WeightViewController") as! WeightViewController
         self.show(weightViewController, sender: nil)
+    }
+    
+    @IBAction func settingButtonTapped(_ sender: UITapGestureRecognizer) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "ConnectViewController", bundle: nil)
+        let connectViewController = storyboard.instantiateViewController(withIdentifier: "ConnectViewController") as! ConnectViewController
+        self.present(connectViewController, animated: true)
     }
 }
