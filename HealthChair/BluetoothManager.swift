@@ -41,6 +41,21 @@ class BluetoothManager: NSObject {
         serviceUUID = CBUUID(string: kUARTServiceUUID)
         charcteristicUUIDs = [CBUUID(string: kRXCharacteristicUUID)]
     }
+    
+    func sendData(str: String){
+        guard let peripheral = self.peripheral else {
+            return
+        }
+        guard let kRXCBCharacteristic = kRXCBCharacteristic else {
+            return
+        }
+        let writeData = str.data(using: .utf8)!
+        peripheral.writeValue(writeData, for: kRXCBCharacteristic, type: .withResponse)
+    }
+    
+    func calibrate(){
+        sendData(str: "calibrate")
+    }
 }
 
 extension BluetoothManager: CBCentralManagerDelegate {
@@ -133,15 +148,8 @@ extension BluetoothManager: CBPeripheralDelegate {
             startReciving()
         }
         print("  - Characteristic didDiscovered")
-        guard let peripheral = self.peripheral else {
-            return
-        }
-        guard let kRXCBCharacteristic = kRXCBCharacteristic else {
-            return
-        }
-        let writeData = String(usManager.getUserId()).data(using: .utf8)!
-        peripheral.writeValue(writeData, for: kRXCBCharacteristic, type: .withResponse)
         
+        sendData(str: String(usManager.getUserId()))
         isConnected = true
         delegate?.connected()
     }

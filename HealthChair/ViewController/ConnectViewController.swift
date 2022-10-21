@@ -13,6 +13,8 @@ class ConnectViewController: UIViewController {
     @IBOutlet var Circle2: UIView!
     @IBOutlet var Circle3: UIView!
     
+    @IBOutlet var titleLabel: UILabel!
+    
     var cnt = 0
     var timer:Timer?
     let bluetoothManager = BluetoothManager.shared
@@ -21,6 +23,12 @@ class ConnectViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if bluetoothManager.isConnected == false {
+            setup()
+        }
+    }
+    
+    func setup(){
         timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true, block: { _ in
             switch self.cnt % 8 {
             case 0:
@@ -45,16 +53,30 @@ class ConnectViewController: UIViewController {
         bluetoothManager.delegate = self
         bluetoothManager.setup()
     }
-}
-
-extension ConnectViewController: BluetoothManagerDelegate {
-    func connected() {
-        timer?.invalidate()
+    
+    func back(){
         bluetoothManager.delegate = nil
         if let presentationController = presentationController{
             presentationController.delegate?.presentationControllerDidDismiss?(presentationController)
         }
         self.dismiss(animated: true)
+    }
+}
+
+extension ConnectViewController: BluetoothManagerDelegate {
+    func connected() {
+        titleLabel.text = "キャリブレーションしています\n動かさないでください"
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { _ in
+            self.bluetoothManager.calibrate()
+            self.titleLabel.text = "ペアリングが完了しました"
+            self.timer?.invalidate()
+            self.Circle1.isHidden = false
+            self.Circle2.isHidden = false
+            self.Circle3.isHidden = false
+        })
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { _ in
+            self.back()
+        })
     }
     
     func dataUpdated(rawData: RawData) {
