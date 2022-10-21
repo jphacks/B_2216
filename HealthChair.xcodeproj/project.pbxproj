@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8314E01AD5244B8A036D3358 /* Pods_HealthChair.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB4CEFB9189A668137E3B8B /* Pods_HealthChair.framework */; };
 		C514E3B628FBCC0500BBB4E6 /* sample_dairy.json in Resources */ = {isa = PBXBuildFile; fileRef = C514E3B428FBC97C00BBB4E6 /* sample_dairy.json */; };
 		C514E3B928FBDCF500BBB4E6 /* DairyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514E3B828FBDCF500BBB4E6 /* DairyData.swift */; };
 		C514E3BB28FC520000BBB4E6 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514E3BA28FC520000BBB4E6 /* WeightViewController.swift */; };
@@ -47,6 +48,9 @@
 		C55AA5982902CFBE00F9307C /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		C593B56C28F16A7C006C10AC /* SittingTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingTimeViewController.swift; sourceTree = "<group>"; };
 		C593B56E28F16A9F006C10AC /* SittingTimeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SittingTimeViewController.storyboard; sourceTree = "<group>"; };
+		DEB4CEFB9189A668137E3B8B /* Pods_HealthChair.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthChair.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0C4C1BEFD9FF413B307108F /* Pods-HealthChair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthChair.release.xcconfig"; path = "Target Support Files/Pods-HealthChair/Pods-HealthChair.release.xcconfig"; sourceTree = "<group>"; };
+		F9DBCD42F5A46B801A098BB5 /* Pods-HealthChair.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthChair.debug.xcconfig"; path = "Target Support Files/Pods-HealthChair/Pods-HealthChair.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +59,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				C58B620028FAC1E600DFCDDB /* Charts in Frameworks */,
+				8314E01AD5244B8A036D3358 /* Pods_HealthChair.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6BED069965A8E50F5D99B8A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEB4CEFB9189A668137E3B8B /* Pods_HealthChair.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C514E3B528FBCBBE00BBB4E6 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +96,8 @@
 			children = (
 				C52D13B028EDEC3700D44472 /* HealthChair */,
 				C52D13AF28EDEC3700D44472 /* Products */,
+				FC7D86526A2C87DE99AA0E9E /* Pods */,
+				6BED069965A8E50F5D99B8A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +141,16 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		FC7D86526A2C87DE99AA0E9E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9DBCD42F5A46B801A098BB5 /* Pods-HealthChair.debug.xcconfig */,
+				F0C4C1BEFD9FF413B307108F /* Pods-HealthChair.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -133,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C52D13C228EDEC3800D44472 /* Build configuration list for PBXNativeTarget "HealthChair" */;
 			buildPhases = (
+				CA09D21AC1731E810F91D714 /* [CP] Check Pods Manifest.lock */,
 				C52D13AA28EDEC3700D44472 /* Sources */,
 				C52D13AB28EDEC3700D44472 /* Frameworks */,
 				C52D13AC28EDEC3700D44472 /* Resources */,
+				04959BB488BC01C385776E94 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,7 +192,7 @@
 				};
 			};
 			buildConfigurationList = C52D13A928EDEC3700D44472 /* Build configuration list for PBXProject "HealthChair" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -201,6 +228,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04959BB488BC01C385776E94 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HealthChair/Pods-HealthChair-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HealthChair/Pods-HealthChair-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HealthChair/Pods-HealthChair-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA09D21AC1731E810F91D714 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthChair-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C52D13AA28EDEC3700D44472 /* Sources */ = {
@@ -358,6 +427,7 @@
 		};
 		C52D13C328EDEC3800D44472 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9DBCD42F5A46B801A098BB5 /* Pods-HealthChair.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -387,6 +457,7 @@
 		};
 		C52D13C428EDEC3800D44472 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0C4C1BEFD9FF413B307108F /* Pods-HealthChair.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
