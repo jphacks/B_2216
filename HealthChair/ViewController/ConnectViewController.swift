@@ -14,6 +14,7 @@ class ConnectViewController: UIViewController {
     @IBOutlet var Circle3: UIView!
     
     var cnt = 0
+    let bluetoothManager = BluetoothManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,5 +41,7 @@ class ConnectViewController: UIViewController {
             }
             self.cnt += 1
         })
+        
+        bluetoothManager.setup()
     }
 }
