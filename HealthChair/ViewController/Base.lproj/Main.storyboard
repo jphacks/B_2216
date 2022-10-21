@@ -256,8 +256,18 @@
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2os-Am-X1f">
                                         <rect key="frame" x="35" y="78.333333333333343" width="320" height="320"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6F-ov-yap">
+                                                <rect key="frame" x="155" y="149.99999999999997" width="10.333333333333343" height="20.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="k6F-ov-yap" firstAttribute="centerY" secondItem="2os-Am-X1f" secondAttribute="centerY" id="01u-dk-3of"/>
+                                            <constraint firstItem="k6F-ov-yap" firstAttribute="centerX" secondItem="2os-Am-X1f" secondAttribute="centerX" id="0Kv-xW-r9k"/>
                                             <constraint firstAttribute="width" constant="320" id="GhU-Op-iDF"/>
                                             <constraint firstAttribute="height" constant="320" id="Qbq-Vp-oHW"/>
                                         </constraints>
@@ -289,6 +299,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="0NC-67-UMG"/>
                     <connections>
+                        <outlet property="label" destination="k6F-ov-yap" id="sa4-s7-bm3"/>
                         <outlet property="realtimeCardView" destination="2os-Am-X1f" id="zfK-4s-zhE"/>
                         <outlet property="sittingCardView" destination="Atx-3S-3nE" id="rbE-ad-WGH"/>
                         <outlet property="weightCardView" destination="4r1-3u-Rg1" id="LJJ-kr-IB5"/>

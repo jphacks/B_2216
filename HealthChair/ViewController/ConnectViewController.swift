@@ -14,13 +14,14 @@ class ConnectViewController: UIViewController {
     @IBOutlet var Circle3: UIView!
     
     var cnt = 0
+    var timer:Timer?
     let bluetoothManager = BluetoothManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        var timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true, block: { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true, block: { _ in
             switch self.cnt % 8 {
             case 0:
                 self.Circle1.isHidden = true
@@ -41,7 +42,26 @@ class ConnectViewController: UIViewController {
             }
             self.cnt += 1
         })
-        
+        bluetoothManager.delegate = self
         bluetoothManager.setup()
+    }
+}
+
+extension ConnectViewController: BluetoothManagerDelegate {
+    func connected() {
+        timer?.invalidate()
+        bluetoothManager.delegate = nil
+        if let presentationController = presentationController{
+            presentationController.delegate?.presentationControllerDidDismiss?(presentationController)
+        }
+        self.dismiss(animated: true)
+    }
+    
+    func dataUpdated(rawData: RawData) {
+        print("dataUpdated")
+    }
+    
+    func endConnecting() {
+        print("EndConnecting")
     }
 }

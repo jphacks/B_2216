@@ -13,6 +13,10 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet var weightCardView: UIView!
     @IBOutlet var realtimeCardView: UIView!
     
+    @IBOutlet var label: UILabel!
+    
+    var bluetoothManager = BluetoothManager.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -30,6 +34,13 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
                 action: #selector(self.weightCardViewTapped(_:))))
         
         navigationItem.backBarButtonItem = .init(title: "概要", style: .plain, target: nil, action: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if bluetoothManager.isConnected {
+            bluetoothManager.delegate = self
+        }
     }
     
     func setup() {
@@ -53,6 +64,29 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func settingButtonTapped(_ sender: UITapGestureRecognizer) {
         let storyboard: UIStoryboard = UIStoryboard(name: "ConnectViewController", bundle: nil)
         let connectViewController = storyboard.instantiateViewController(withIdentifier: "ConnectViewController") as! ConnectViewController
+        connectViewController.presentationController?.delegate = self
         self.present(connectViewController, animated: true)
+    }
+}
+
+extension MainViewController: BluetoothManagerDelegate {
+    func connected() {
+        print("connected")
+    }
+    
+    func endConnecting() {
+        print("end connecting")
+    }
+    
+    func dataUpdated(rawData: RawData) {
+        label.text = String(rawData.w0 + rawData.w1 + rawData.w2 + rawData.w3) + "kg"
+    }
+    
+}
+
+extension MainViewController: UIAdaptivePresentationControllerDelegate {
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        print("come back")
+        bluetoothManager.delegate = self
     }
 }

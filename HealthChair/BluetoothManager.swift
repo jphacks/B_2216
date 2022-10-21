@@ -8,6 +8,12 @@
 import Foundation
 import CoreBluetooth
 
+protocol BluetoothManagerDelegate: AnyObject {
+    func connected()
+    func endConnecting()
+    func dataUpdated(rawData: RawData)
+}
+
 class BluetoothManager: NSObject {
     let kUARTServiceUUID = "2309e44f-cb8d-43fc-95b2-4c7134c23467" // サービス
     let kRXCharacteristicUUID = "37216a09-9f31-40f7-ab16-54ae5b32fd19" // ペリフェラルからの受信用
@@ -19,7 +25,11 @@ class BluetoothManager: NSObject {
     var kRXCBCharacteristic: CBCharacteristic?
     var charcteristicUUIDs: [CBUUID]!
     
+    var isConnected = false
+    
     static let shared = BluetoothManager()
+    
+    weak var delegate: BluetoothManagerDelegate?
     
     func setup(){
         print("setup...")
@@ -122,7 +132,8 @@ extension BluetoothManager: CBPeripheralDelegate {
             startReciving()
         }
         print("  - Characteristic didDiscovered")
-
+        isConnected = true
+        delegate?.connected()
     }
     
     private func startReciving() {
@@ -158,13 +169,13 @@ extension BluetoothManager: CBPeripheralDelegate {
     }
     
     private func updateWithData(data : Data) {
-        print("raw", data, "int", data.withUnsafeBytes { $0.load( as: Float.self ) } )
         let decoder = JSONDecoder()
         do {
             let data = try decoder.decode(RawData.self,from: data)
-            print(data)
+            delegate?.dataUpdated(rawData: data)
+            print("data", data)
         } catch let parseError {
-            print("JSON Error")
+            print("JSON",parseError)
         }
     }
     
