@@ -159,8 +159,12 @@ extension BluetoothManager: CBPeripheralDelegate {
     
     private func updateWithData(data : Data) {
         print("raw", data, "int", data.withUnsafeBytes { $0.load( as: Float.self ) } )
-        if let dataString = String(data: data, encoding: String.Encoding.utf8) {
-            print(dataString)
+        let decoder = JSONDecoder()
+        do {
+            let data = try decoder.decode(RawData.self,from: data)
+            print(data)
+        } catch let parseError {
+            print("JSON Error")
         }
     }
     
