@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ペアリングをしています" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XtE-ko-l5J">
-                                <rect key="frame" x="39" y="95" width="312.33333333333326" height="33.666666666666657"/>
+                                <rect key="frame" x="39" y="111" width="312.33333333333331" height="33.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -73,12 +73,17 @@
                             <constraint firstItem="4bg-2d-2iW" firstAttribute="top" secondItem="y8w-se-UMn" secondAttribute="bottom" constant="40" id="SdI-7e-Eaq"/>
                             <constraint firstItem="3Xh-8s-qPf" firstAttribute="centerY" secondItem="4bg-2d-2iW" secondAttribute="centerY" id="aVm-b3-FWP"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="4bg-2d-2iW" secondAttribute="bottom" constant="16" id="ayc-OU-vPY"/>
-                            <constraint firstItem="XtE-ko-l5J" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="48" id="dgd-MG-e0W"/>
+                            <constraint firstItem="XtE-ko-l5J" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="64" id="dgd-MG-e0W"/>
                             <constraint firstItem="bju-FB-8CN" firstAttribute="centerY" secondItem="4bg-2d-2iW" secondAttribute="centerY" id="h91-tX-M16"/>
                             <constraint firstItem="3Xh-8s-qPf" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="lb1-S1-c8e"/>
                             <constraint firstItem="4bg-2d-2iW" firstAttribute="top" secondItem="y8w-se-UMn" secondAttribute="bottom" constant="40" id="wkN-Bz-Ffw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Circle1" destination="bju-FB-8CN" id="l74-Y1-42l"/>
+                        <outlet property="Circle2" destination="4GC-pt-tI4" id="mkW-mG-CSQ"/>
+                        <outlet property="Circle3" destination="4bg-2d-2iW" id="i1o-La-Ju9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

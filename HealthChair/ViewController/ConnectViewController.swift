@@ -8,22 +8,37 @@
 import UIKit
 
 class ConnectViewController: UIViewController {
+    
+    @IBOutlet var Circle1: UIView!
+    @IBOutlet var Circle2: UIView!
+    @IBOutlet var Circle3: UIView!
+    
+    var cnt = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        var timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true, block: { _ in
+            switch self.cnt % 8 {
+            case 0:
+                self.Circle1.isHidden = true
+                self.Circle2.isHidden = true
+                self.Circle3.isHidden = true
+                break
+            case 2:
+                self.Circle1.isHidden = false
+                break
+            case 3:
+                self.Circle2.isHidden = false
+                break
+            case 4:
+                self.Circle3.isHidden = false
+                break
+            default:
+                break
+            }
+            self.cnt += 1
+        })
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
