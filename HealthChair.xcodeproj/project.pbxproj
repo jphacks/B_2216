@@ -120,10 +120,18 @@
 				C52D13BC28EDEC3800D44472 /* LaunchScreen.storyboard */,
 				C52D13BF28EDEC3800D44472 /* Info.plist */,
 				C514E3B528FBCBBE00BBB4E6 /* Resource */,
+				C55AA59A2902EE2A00F9307C /* Manager */,
+			);
+			path = HealthChair;
+			sourceTree = "<group>";
+		};
+		C55AA59A2902EE2A00F9307C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
 				C55AA5942902B5DA00F9307C /* BluetoothManager.swift */,
 				C55AA5982902CFBE00F9307C /* UserDefaultsManager.swift */,
 			);
-			path = HealthChair;
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		C59A2E9028FB08D7009EBC43 /* ViewController */ = {
@@ -147,7 +155,6 @@
 				F9DBCD42F5A46B801A098BB5 /* Pods-HealthChair.debug.xcconfig */,
 				F0C4C1BEFD9FF413B307108F /* Pods-HealthChair.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

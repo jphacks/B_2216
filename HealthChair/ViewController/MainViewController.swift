@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MBCircularProgressBar
 
 class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     
@@ -14,6 +15,7 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet var realtimeCardView: UIView!
     
     @IBOutlet var label: UILabel!
+    @IBOutlet var circularview: MBCircularProgressBarView!
     
     var bluetoothManager = BluetoothManager.shared
     
@@ -40,6 +42,17 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
         sittingCardView.layer.cornerRadius = 16
         weightCardView.layer.cornerRadius = 16
         realtimeCardView.layer.cornerRadius = 16
+        
+        circularview.isHidden = false
+        label.isHidden = true
+        
+//        if bluetoothManager.isConnected {
+//            circularview.isHidden = false
+//            label.isHidden = true
+//        } else {
+//            circularview.isHidden = true
+//            label.isHidden = false
+//        }
     }
 
     @objc func sittingCardViewTapped(_ sender: UITapGestureRecognizer) {
@@ -72,7 +85,8 @@ extension MainViewController: BluetoothManagerDelegate {
     }
     
     func dataUpdated(rawData: RawData) {
-        label.text = String(rawData.w0 + rawData.w1 + rawData.w2 + rawData.w3) + "kg"
+        circularview.value = CGFloat(rawData.w0 + rawData.w1 + rawData.w2 + rawData.w3)
+        // label.text = String(rawData.w0 + rawData.w1 + rawData.w2 + rawData.w3) + "kg"
     }
     
 }
@@ -81,5 +95,6 @@ extension MainViewController: UIAdaptivePresentationControllerDelegate {
     func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
         print("come back")
         bluetoothManager.delegate = self
+        setup()
     }
 }
