@@ -21,6 +21,7 @@
 		C55AA59328FF0DD300F9307C /* ConnectViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C55AA59228FF0DD300F9307C /* ConnectViewController.storyboard */; };
 		C55AA5952902B5DA00F9307C /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55AA5942902B5DA00F9307C /* BluetoothManager.swift */; };
 		C55AA5972902BA5A00F9307C /* RawData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55AA5962902BA5A00F9307C /* RawData.swift */; };
+		C55AA5992902CFBE00F9307C /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55AA5982902CFBE00F9307C /* UserDefaultsManager.swift */; };
 		C58B620028FAC1E600DFCDDB /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = C58B61FF28FAC1E600DFCDDB /* Charts */; };
 		C593B56D28F16A7C006C10AC /* SittingTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C593B56C28F16A7C006C10AC /* SittingTimeViewController.swift */; };
 		C593B56F28F16A9F006C10AC /* SittingTimeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C593B56E28F16A9F006C10AC /* SittingTimeViewController.storyboard */; };
@@ -43,6 +44,7 @@
 		C55AA59228FF0DD300F9307C /* ConnectViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConnectViewController.storyboard; sourceTree = "<group>"; };
 		C55AA5942902B5DA00F9307C /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		C55AA5962902BA5A00F9307C /* RawData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawData.swift; sourceTree = "<group>"; };
+		C55AA5982902CFBE00F9307C /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		C593B56C28F16A7C006C10AC /* SittingTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingTimeViewController.swift; sourceTree = "<group>"; };
 		C593B56E28F16A9F006C10AC /* SittingTimeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SittingTimeViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +106,7 @@
 				C52D13BF28EDEC3800D44472 /* Info.plist */,
 				C514E3B528FBCBBE00BBB4E6 /* Resource */,
 				C55AA5942902B5DA00F9307C /* BluetoothManager.swift */,
+				C55AA5982902CFBE00F9307C /* UserDefaultsManager.swift */,
 			);
 			path = HealthChair;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				C55AA5952902B5DA00F9307C /* BluetoothManager.swift in Sources */,
 				C52D13B628EDEC3700D44472 /* MainViewController.swift in Sources */,
 				C514E3B928FBDCF500BBB4E6 /* DairyData.swift in Sources */,
+				C55AA5992902CFBE00F9307C /* UserDefaultsManager.swift in Sources */,
 				C52D13B228EDEC3700D44472 /* AppDelegate.swift in Sources */,
 				C593B56D28F16A7C006C10AC /* SittingTimeViewController.swift in Sources */,
 				C52D13B428EDEC3700D44472 /* SceneDelegate.swift in Sources */,

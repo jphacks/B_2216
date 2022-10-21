@@ -36,13 +36,6 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
         navigationItem.backBarButtonItem = .init(title: "概要", style: .plain, target: nil, action: nil)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if bluetoothManager.isConnected {
-            bluetoothManager.delegate = self
-        }
-    }
-    
     func setup() {
         sittingCardView.layer.cornerRadius = 16
         weightCardView.layer.cornerRadius = 16

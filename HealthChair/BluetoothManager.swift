@@ -28,6 +28,7 @@ class BluetoothManager: NSObject {
     var isConnected = false
     
     static let shared = BluetoothManager()
+    let usManager = UserDefaultsManager.shared
     
     weak var delegate: BluetoothManagerDelegate?
     
@@ -132,6 +133,15 @@ extension BluetoothManager: CBPeripheralDelegate {
             startReciving()
         }
         print("  - Characteristic didDiscovered")
+        guard let peripheral = self.peripheral else {
+            return
+        }
+        guard let kRXCBCharacteristic = kRXCBCharacteristic else {
+            return
+        }
+        let writeData = String(usManager.getUserId()).data(using: .utf8)!
+        peripheral.writeValue(writeData, for: kRXCBCharacteristic, type: .withResponse)
+        
         isConnected = true
         delegate?.connected()
     }
