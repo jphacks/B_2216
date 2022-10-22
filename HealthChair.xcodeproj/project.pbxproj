@@ -26,6 +26,8 @@
 		C58B620028FAC1E600DFCDDB /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = C58B61FF28FAC1E600DFCDDB /* Charts */; };
 		C593B56D28F16A7C006C10AC /* SittingTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C593B56C28F16A7C006C10AC /* SittingTimeViewController.swift */; };
 		C593B56F28F16A9F006C10AC /* SittingTimeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C593B56E28F16A9F006C10AC /* SittingTimeViewController.storyboard */; };
+		C5CE280B2903522F00692FA0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CE280A2903522F00692FA0 /* APIManager.swift */; };
+		C5CE280E2903606800692FA0 /* SittingUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CE280D2903606800692FA0 /* SittingUnit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		C55AA5982902CFBE00F9307C /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		C593B56C28F16A7C006C10AC /* SittingTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingTimeViewController.swift; sourceTree = "<group>"; };
 		C593B56E28F16A9F006C10AC /* SittingTimeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SittingTimeViewController.storyboard; sourceTree = "<group>"; };
+		C5CE280A2903522F00692FA0 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		C5CE280D2903606800692FA0 /* SittingUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingUnit.swift; sourceTree = "<group>"; };
 		DEB4CEFB9189A668137E3B8B /* Pods_HealthChair.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthChair.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C4C1BEFD9FF413B307108F /* Pods-HealthChair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthChair.release.xcconfig"; path = "Target Support Files/Pods-HealthChair/Pods-HealthChair.release.xcconfig"; sourceTree = "<group>"; };
 		F9DBCD42F5A46B801A098BB5 /* Pods-HealthChair.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthChair.debug.xcconfig"; path = "Target Support Files/Pods-HealthChair/Pods-HealthChair.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			children = (
 				C514E3B828FBDCF500BBB4E6 /* DairyData.swift */,
 				C55AA5962902BA5A00F9307C /* RawData.swift */,
+				C5CE280D2903606800692FA0 /* SittingUnit.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,10 +125,19 @@
 				C52D13BC28EDEC3800D44472 /* LaunchScreen.storyboard */,
 				C52D13BF28EDEC3800D44472 /* Info.plist */,
 				C514E3B528FBCBBE00BBB4E6 /* Resource */,
-				C55AA5942902B5DA00F9307C /* BluetoothManager.swift */,
-				C55AA5982902CFBE00F9307C /* UserDefaultsManager.swift */,
+				C55AA59A2902EE2A00F9307C /* Manager */,
 			);
 			path = HealthChair;
+			sourceTree = "<group>";
+		};
+		C55AA59A2902EE2A00F9307C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C55AA5942902B5DA00F9307C /* BluetoothManager.swift */,
+				C55AA5982902CFBE00F9307C /* UserDefaultsManager.swift */,
+				C5CE280A2903522F00692FA0 /* APIManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		C59A2E9028FB08D7009EBC43 /* ViewController */ = {
@@ -147,7 +161,6 @@
 				F9DBCD42F5A46B801A098BB5 /* Pods-HealthChair.debug.xcconfig */,
 				F0C4C1BEFD9FF413B307108F /* Pods-HealthChair.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -280,7 +293,9 @@
 				C55AA59128FF0DC500F9307C /* ConnectViewController.swift in Sources */,
 				C514E3BB28FC520000BBB4E6 /* WeightViewController.swift in Sources */,
 				C55AA5952902B5DA00F9307C /* BluetoothManager.swift in Sources */,
+				C5CE280B2903522F00692FA0 /* APIManager.swift in Sources */,
 				C52D13B628EDEC3700D44472 /* MainViewController.swift in Sources */,
+				C5CE280E2903606800692FA0 /* SittingUnit.swift in Sources */,
 				C514E3B928FBDCF500BBB4E6 /* DairyData.swift in Sources */,
 				C55AA5992902CFBE00F9307C /* UserDefaultsManager.swift in Sources */,
 				C52D13B228EDEC3700D44472 /* AppDelegate.swift in Sources */,
@@ -436,6 +451,8 @@
 				DEVELOPMENT_TEAM = 377B7BZZ6Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HealthChair/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -466,6 +483,8 @@
 				DEVELOPMENT_TEAM = 377B7BZZ6Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HealthChair/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
