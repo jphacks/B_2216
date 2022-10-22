@@ -65,6 +65,7 @@ ESP32は各足の荷重センサの値をBLE経由でiOS、WiFi経由でサー�
     - SQLAlchemy
     - Docker
     - Poetry
+    - CI (GitHub Actions)
 - 組み込み
     - ESP32
     - Bluetooth Low Energy
@@ -77,9 +78,8 @@ ESP32は各足の荷重センサの値をBLE経由でiOS、WiFi経由でサー�
 
 ### 独自技術
 #### ハッカソンで開発した独自機能・技術
-* 独自で開発したものの内容をこちらに記載してください
-* 特に力を入れた部分をファイルリンク、またはcommit_idを記載してください。
+* 圧力センサーを利用して体重を計測するシステム
+* フロントエンド
+  * [Bluetooth接続部分(フロントエンド)](https://github.com/jphacks/B_2216/blob/c26b23d561683fe225e9d722c963b44387111fec/HealthChair/Manager/BluetoothManager.swift)
+  * delegateやcompletionを活用したデータフロー
 
-#### 製品に取り入れた研究内容（データ・ソフトウェアなど）（※アカデミック部門の場合のみ提出必須）
-* 
-* 
