@@ -46,13 +46,13 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
         circularview.isHidden = false
         label.isHidden = true
         
-//        if bluetoothManager.isConnected {
-//            circularview.isHidden = false
-//            label.isHidden = true
-//        } else {
-//            circularview.isHidden = true
-//            label.isHidden = false
-//        }
+        if bluetoothManager.isConnected {
+            circularview.isHidden = false
+            label.isHidden = true
+        } else {
+            circularview.isHidden = true
+            label.isHidden = false
+        }
     }
 
     @objc func sittingCardViewTapped(_ sender: UITapGestureRecognizer) {

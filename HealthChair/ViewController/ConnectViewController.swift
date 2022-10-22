@@ -66,7 +66,7 @@ class ConnectViewController: UIViewController {
 extension ConnectViewController: BluetoothManagerDelegate {
     func connected() {
         titleLabel.text = "キャリブレーションしています\n動かさないでください"
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { _ in
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { _ in
             self.bluetoothManager.calibrate()
             self.titleLabel.text = "ペアリングが完了しました"
             self.timer?.invalidate()
@@ -74,7 +74,7 @@ extension ConnectViewController: BluetoothManagerDelegate {
             self.Circle2.isHidden = false
             self.Circle3.isHidden = false
         })
-        Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { _ in
+        Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: { _ in
             self.back()
         })
     }
