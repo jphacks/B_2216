@@ -39,7 +39,10 @@ ESP32は各足の荷重センサの値をBLE経由でiOS、WiFi経由でサー�
 * 
 
 ## 開発技術
-**何か図を入れる**
+
+### 構成図
+
+![architecture](resources/architecture.png)
 ### 活用した技術
 - フロントエンド
 - バックエンド
