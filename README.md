@@ -38,8 +38,9 @@ ESP32は各足の荷重センサの値をBLE経由でiOS、WiFi経由でサー�
 4. 椅子に座ると、体重がリアルタイムで表示される
 5. iOSアプリから、体重の推移や座っている時間を確認できる
 
-|![image5](resources/5.PNG)|![image6](resources/6.PNG)|![image7](resources/7.PNG)|![image8](resources/8.PNG)|
+|![image5](resources/5.PNG)|![image7](resources/7.PNG)|![image6](resources/6.PNG)|![image8](resources/8.PNG)|
 |---|---|---|---|
+|ペアリング画面|メイン画面|座った時間|体重の推移|
 
 ### 解決出来ること
 - 肥満予防や足腰の痛み予防
