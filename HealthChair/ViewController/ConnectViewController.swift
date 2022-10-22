@@ -74,7 +74,7 @@ extension ConnectViewController: BluetoothManagerDelegate {
             self.Circle2.isHidden = false
             self.Circle3.isHidden = false
         })
-        Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: { _ in
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: { _ in
             self.back()
         })
     }
