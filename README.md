@@ -43,6 +43,12 @@ ESP32は各足の荷重センサの値をBLE経由でiOS、WiFi経由でサー�
 ### 活用した技術
 - フロントエンド
 - バックエンド
+    - Python
+    - FastAPI
+    - sqlite
+    - SQLAlchemy
+    - Docker
+    - Poetry
 - 組み込み
     - ESP32
     - Bluetooth Low Energy
