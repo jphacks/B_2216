@@ -42,6 +42,12 @@
 ### 活用した技術
 - フロントエンド
 - バックエンド
+    - Python
+    - FastAPI
+    - sqlite
+    - SQLAlchemy
+    - Docker
+    - Poetry
 - 組み込み
     - esp32
     - Bluetooth Low Energy
