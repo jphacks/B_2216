@@ -51,5 +51,25 @@ class APIManager {
         })
         .resume()
     }
+    
+    func requestSittingSum(completion: @escaping (_ data :Float) -> Void){
+        let urlString = "https://api.jphacks2022.so298.net/data/sitting/today/" + String(udManager.getUserId()) + "/"
+        let url = URL(string: urlString)!
+        URLSession.shared.dataTask(with: url, completionHandler: {(data, response, error) in
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription as Any)
+                return
+            }
+            print("json got")
+            let decoder = JSONDecoder()
+            do {
+                let responseData: [SittingUnit] = try decoder.decode([SittingUnit].self, from: data)
+                completion(responseData.map{$0.hours * 60}.reduce(0,+))
+            } catch let parseError {
+                print("JSON Error \(parseError.localizedDescription)")
+            }
+        })
+        .resume()
+    }
    
 }

@@ -17,6 +17,10 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet var label: UILabel!
     @IBOutlet var circularview: MBCircularProgressBarView!
     
+    @IBOutlet var sittingHourLabel: UILabel!
+    @IBOutlet var sittingMinuteLabel: UILabel!
+    @IBOutlet var kilogramLabel: UILabel!
+    
     var bluetoothManager = BluetoothManager.shared
     
     override func viewDidLoad() {
@@ -53,6 +57,15 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
             circularview.isHidden = true
             label.isHidden = false
         }
+        
+        let apiManager = APIManager()
+        apiManager.requestSittingSum(completion: {[weak self] sum in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.sittingHourLabel.text = String(Int(sum) / 60)
+                self.sittingMinuteLabel.text = String(Int(sum) % 60)
+            }
+        })
     }
 
     @objc func sittingCardViewTapped(_ sender: UITapGestureRecognizer) {

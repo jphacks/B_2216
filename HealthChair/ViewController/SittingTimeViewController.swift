@@ -65,7 +65,6 @@ class SittingTimeViewController: UIViewController {
                 self.hourLabel.text = String(Int(sum) / 60)
                 self.minuteLabel.text = String(Int(sum) % 60)
             }
-            print("hello",data)
         })
         
         guard let url = Bundle.main.url(forResource: "sample_dairy", withExtension: "json") else { fatalError("ファイルが見つからない") }
