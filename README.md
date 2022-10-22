@@ -71,6 +71,9 @@ ESP32は各足の荷重センサの値をBLE経由でiOS、WiFi経由でサー�
     - Bluetooth Low Energy
     - httpClient
 
+#### バックエンド・デバイスのファームウェアのソースはこちら
+[https://github.com/jphacks/B_2216_1](https://github.com/jphacks/B_2216_1)
+
 #### デバイス
 * iOS(各種データ表示、設定)
 * ESP32
