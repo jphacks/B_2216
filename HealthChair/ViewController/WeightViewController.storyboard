@@ -22,11 +22,8 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sKg-13-N2i">
                                         <rect key="frame" x="16" y="8" width="358" height="32"/>
                                         <segments>
-                                            <segment title="日"/>
                                             <segment title="週"/>
                                             <segment title="月"/>
-                                            <segment title="6か月"/>
-                                            <segment title="年"/>
                                         </segments>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平均" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJa-pj-9cT">

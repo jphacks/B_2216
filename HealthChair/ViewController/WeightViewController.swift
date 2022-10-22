@@ -18,6 +18,10 @@ class WeightViewController: UIViewController {
         setUpGraph()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.title = "体重"
+    }
+    
     func setUpGraph(){
         let rawData: [Int] = [72, 74, 70, 69, 68, 70, 71]
         let entries = rawData.enumerated().map { BarChartDataEntry(x: Double($0.offset), y: Double($0.element)) }
@@ -70,5 +74,13 @@ public class LineChartFormatter: NSObject, AxisValueFormatter{
     public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         // 0 -> Jan, 1 -> Feb...
         return dayNames[Int(value)]
+    }
+}
+
+
+public class KiloGramFormatter: NSObject, AxisValueFormatter{
+    public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        // 0 -> Jan, 1 -> Feb...
+        return String(Int(value)) + "Kg"
     }
 }
