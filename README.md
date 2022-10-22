@@ -5,7 +5,7 @@
 
 ### 紹介動画
 
-[![](https://img.youtube.com/vi/uQ5Fzr1trY4/0.jpg)](https://www.youtube.com/watch?v=uQ5Fzr1trY4)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uQ5Fzr1trY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### 背景
 近年、テレワークやオンライン授業など、「**椅子に座る**」時間が増えてきています。椅子に座る時間が長くなると、運動不足による**肥満**、**足腰の痛み**、さらには**寿命への悪影響**など様々な問題を引き起こします。多くの企業、大学が継続したハイブリッド化を発表している昨今、自宅で椅子に座ることは避けて通ることはできません。
