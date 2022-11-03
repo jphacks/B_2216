@@ -37,7 +37,7 @@ struct SittingData : Codable {
     var monthlyMean: Float = 0
     
     func getAllData(completion: @escaping (_ data :SittingData) -> Void) {
-        var apiManager = APIManager()
+        let apiManager = APIManager()
         apiManager.requestSitting(sittingData: self, completion: completion)
     }
 }

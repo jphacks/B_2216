@@ -9,8 +9,22 @@ import Foundation
 
 class APIManager {
     let udManager = UserDefaultsManager.shared
+    
+    let baseUrl:String = "https://api.jphacks2022.so298.net"
+    
+    var userId: String {
+        // String(udManager.getUserId())
+        "7"
+    }
+    
+    enum SittingType: String {
+        case daily = "/data/sitting/today/"
+        case weekly = "/data/sitting/weekly/"
+        case monthly = "/data/sitting/monthly/"
+    }
+    
     func requestUrl(){
-        let urlString:String = "https://api.jphacks2022.so298.net" + "/data/sitting/today" + "/" + String(udManager.getUserId()) + "/"
+        let urlString:String = baseUrl + "/data/sitting/today" + "/" + userId + "/"
         print("post url: ", urlString)
         let url = URL(string: urlString)!
         URLSession.shared.dataTask(with: url, completionHandler: {(data, response, error) in
@@ -31,12 +45,11 @@ class APIManager {
     }
     
     func requestSitting(sittingData: SittingData,  completion: @escaping (_ data :SittingData) -> Void) {
-        requestDailySitting(sittingData: sittingData, completion: completion)
-        
+        requestDailySitting(sittingData: sittingData, type: .daily, completion: completion)
     }
     
-    func requestDailySitting(sittingData: SittingData,  completion: @escaping (_ data :SittingData) -> Void){
-        let urlString = "https://api.jphacks2022.so298.net/data/sitting/today/" + String(udManager.getUserId()) + "/"
+    func requestDailySitting(sittingData: SittingData, type: SittingType,  completion: @escaping (_ data :SittingData) -> Void){
+        let urlString = baseUrl + type.rawValue + userId + "/"
         print("post url: ", urlString)
         let url = URL(string: urlString)!
         URLSession.shared.dataTask(with: url, completionHandler: {(data, response, error) in
@@ -48,33 +61,22 @@ class APIManager {
             let decoder = JSONDecoder()
             do {
                 var responseData = sittingData
-                responseData.dailyData = try decoder.decode([SittingUnit].self, from: data)
-                completion(sittingData)
+                switch type {
+                case .daily:
+                    responseData.dailyData = try decoder.decode([SittingUnit].self, from: data)
+                    break
+                case .weekly:
+                    responseData.weeklyData = try decoder.decode([SittingUnit].self, from: data)
+                    break
+                case .monthly:
+                    responseData.monthlyData = try decoder.decode([SittingUnit].self, from: data)
+                    break
+                }
+                completion(responseData)
             } catch let parseError {
                 print("JSON Error \(parseError.localizedDescription)")
             }
         })
         .resume()
     }
-    
-    func requestSittingSum(completion: @escaping (_ data :Float) -> Void){
-        let urlString = "https://api.jphacks2022.so298.net/data/sitting/today/" + String(udManager.getUserId()) + "/"
-        let url = URL(string: urlString)!
-        URLSession.shared.dataTask(with: url, completionHandler: {(data, response, error) in
-            guard let data = data, error == nil else {
-                print(error?.localizedDescription as Any)
-                return
-            }
-            print("json got")
-            let decoder = JSONDecoder()
-            do {
-                let responseData: [SittingUnit] = try decoder.decode([SittingUnit].self, from: data)
-                completion(responseData.map{$0.hours * 60}.reduce(0,+))
-            } catch let parseError {
-                print("JSON Error \(parseError.localizedDescription)")
-            }
-        })
-        .resume()
-    }
-   
 }
