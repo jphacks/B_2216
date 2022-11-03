@@ -12,12 +12,15 @@ class SittingTimeViewController: UIViewController {
     @IBOutlet var barChartView: BarChartView!
     @IBOutlet var hourLabel: UILabel!
     @IBOutlet var minuteLabel: UILabel!
+    
+    var SittingData: SittingData?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        getRequest()
+        // getRequest()
+        updateUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,23 +59,23 @@ class SittingTimeViewController: UIViewController {
         barChartView.animate(yAxisDuration: 1, easingOption: .easeOutBack)
     }
     
-    func getRequest() -> [Int] {
-        let apiManager = APIManager()
-        apiManager.requestSitting(params: "/sitting/today",completion: { data in
-            DispatchQueue.main.async {
-                self.setUpGraph(rawData: data)
-                let sum = data.reduce(0,+)
-                self.hourLabel.text = String(Int(sum) / 60)
-                self.minuteLabel.text = String(Int(sum) % 60)
-            }
-        })
-        
-        guard let url = Bundle.main.url(forResource: "sample_dairy", withExtension: "json") else { fatalError("ファイルが見つからない") }
-        guard let data = try? Data(contentsOf: url) else { fatalError("ファイル読み込みエラー") }
-        let decoder = JSONDecoder()
-        guard let response = try? decoder.decode(DairyData.self, from: data) else { fatalError("JSON読み込みエラー") }
-        return response.datas
+    func updateUI(){
+        self.hourLabel.text = String(Int(SittingData?.dailySum ?? 0) / 60)
+        self.minuteLabel.text = String(Int(SittingData?.dailySum ?? 0) % 60)
+        setUpGraph(rawData: SittingData?.dailyData.map{ $0.hours } ?? [])
     }
+    
+//    func getRequest() {
+//        let apiManager = APIManager()
+//        apiManager.requestSitting(params: "/sitting/today",completion: { data in
+//            DispatchQueue.main.async {
+//                self.setUpGraph(rawData: data)
+//                let sum = data.reduce(0,+)
+//                self.hourLabel.text = String(Int(sum) / 60)
+//                self.minuteLabel.text = String(Int(sum) % 60)
+//            }
+//        })
+//    }
     
     @IBAction func segmentedControlSwitched(_ sender: UISegmentedControl) {
         print(sender.titleForSegment(at: sender.selectedSegmentIndex)!)

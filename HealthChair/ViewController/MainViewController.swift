@@ -21,6 +21,8 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet var sittingMinuteLabel: UILabel!
     @IBOutlet var kilogramLabel: UILabel!
     
+    var sittingData = SittingData()
+    
     var bluetoothManager = BluetoothManager.shared
     
     override func viewDidLoad() {
@@ -58,13 +60,14 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
             label.isHidden = false
         }
         
-        let apiManager = APIManager()
-        apiManager.requestSittingSum(completion: {[weak self] sum in
+        sittingData.getAllData(completion: { [weak self] sittingData in
             guard let self = self else { return }
+            self.sittingData = sittingData
             DispatchQueue.main.async {
-                self.sittingHourLabel.text = String(Int(sum) / 60)
-                self.sittingMinuteLabel.text = String(Int(sum) % 60)
+                self.sittingHourLabel.text = String(Int(sittingData.dailySum) / 60)
+                self.sittingMinuteLabel.text = String(Int(sittingData.dailySum) % 60)
             }
+            print(sittingData)
         })
     }
 

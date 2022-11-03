@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8314E01AD5244B8A036D3358 /* Pods_HealthChair.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB4CEFB9189A668137E3B8B /* Pods_HealthChair.framework */; };
 		C514E3B628FBCC0500BBB4E6 /* sample_dairy.json in Resources */ = {isa = PBXBuildFile; fileRef = C514E3B428FBC97C00BBB4E6 /* sample_dairy.json */; };
-		C514E3B928FBDCF500BBB4E6 /* DairyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514E3B828FBDCF500BBB4E6 /* DairyData.swift */; };
+		C514E3B928FBDCF500BBB4E6 /* SittingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514E3B828FBDCF500BBB4E6 /* SittingData.swift */; };
 		C514E3BB28FC520000BBB4E6 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514E3BA28FC520000BBB4E6 /* WeightViewController.swift */; };
 		C514E3BD28FC521500BBB4E6 /* WeightViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C514E3BC28FC521500BBB4E6 /* WeightViewController.storyboard */; };
 		C52D13B228EDEC3700D44472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52D13B128EDEC3700D44472 /* AppDelegate.swift */; };
@@ -23,6 +23,7 @@
 		C55AA5952902B5DA00F9307C /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55AA5942902B5DA00F9307C /* BluetoothManager.swift */; };
 		C55AA5972902BA5A00F9307C /* RawData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55AA5962902BA5A00F9307C /* RawData.swift */; };
 		C55AA5992902CFBE00F9307C /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55AA5982902CFBE00F9307C /* UserDefaultsManager.swift */; };
+		C58100FE290568EF004E9749 /* AllData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58100FD290568EF004E9749 /* AllData.swift */; };
 		C58B620028FAC1E600DFCDDB /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = C58B61FF28FAC1E600DFCDDB /* Charts */; };
 		C593B56D28F16A7C006C10AC /* SittingTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C593B56C28F16A7C006C10AC /* SittingTimeViewController.swift */; };
 		C593B56F28F16A9F006C10AC /* SittingTimeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C593B56E28F16A9F006C10AC /* SittingTimeViewController.storyboard */; };
@@ -32,7 +33,7 @@
 
 /* Begin PBXFileReference section */
 		C514E3B428FBC97C00BBB4E6 /* sample_dairy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sample_dairy.json; sourceTree = "<group>"; };
-		C514E3B828FBDCF500BBB4E6 /* DairyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DairyData.swift; sourceTree = "<group>"; };
+		C514E3B828FBDCF500BBB4E6 /* SittingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingData.swift; sourceTree = "<group>"; };
 		C514E3BA28FC520000BBB4E6 /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		C514E3BC28FC521500BBB4E6 /* WeightViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeightViewController.storyboard; sourceTree = "<group>"; };
 		C52D13AE28EDEC3700D44472 /* HealthChair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthChair.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +49,7 @@
 		C55AA5942902B5DA00F9307C /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		C55AA5962902BA5A00F9307C /* RawData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawData.swift; sourceTree = "<group>"; };
 		C55AA5982902CFBE00F9307C /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		C58100FD290568EF004E9749 /* AllData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllData.swift; sourceTree = "<group>"; };
 		C593B56C28F16A7C006C10AC /* SittingTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingTimeViewController.swift; sourceTree = "<group>"; };
 		C593B56E28F16A9F006C10AC /* SittingTimeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SittingTimeViewController.storyboard; sourceTree = "<group>"; };
 		C5CE280A2903522F00692FA0 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -89,7 +91,7 @@
 		C514E3B728FBDCDA00BBB4E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C514E3B828FBDCF500BBB4E6 /* DairyData.swift */,
+				C514E3B828FBDCF500BBB4E6 /* SittingData.swift */,
 				C55AA5962902BA5A00F9307C /* RawData.swift */,
 				C5CE280D2903606800692FA0 /* SittingUnit.swift */,
 			);
@@ -126,6 +128,7 @@
 				C52D13BF28EDEC3800D44472 /* Info.plist */,
 				C514E3B528FBCBBE00BBB4E6 /* Resource */,
 				C55AA59A2902EE2A00F9307C /* Manager */,
+				C58100FD290568EF004E9749 /* AllData.swift */,
 			);
 			path = HealthChair;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C58100FE290568EF004E9749 /* AllData.swift in Sources */,
 				C55AA5972902BA5A00F9307C /* RawData.swift in Sources */,
 				C55AA59128FF0DC500F9307C /* ConnectViewController.swift in Sources */,
 				C514E3BB28FC520000BBB4E6 /* WeightViewController.swift in Sources */,
@@ -296,7 +300,7 @@
 				C5CE280B2903522F00692FA0 /* APIManager.swift in Sources */,
 				C52D13B628EDEC3700D44472 /* MainViewController.swift in Sources */,
 				C5CE280E2903606800692FA0 /* SittingUnit.swift in Sources */,
-				C514E3B928FBDCF500BBB4E6 /* DairyData.swift in Sources */,
+				C514E3B928FBDCF500BBB4E6 /* SittingData.swift in Sources */,
 				C55AA5992902CFBE00F9307C /* UserDefaultsManager.swift in Sources */,
 				C52D13B228EDEC3700D44472 /* AppDelegate.swift in Sources */,
 				C593B56D28F16A7C006C10AC /* SittingTimeViewController.swift in Sources */,
