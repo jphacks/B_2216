@@ -52,6 +52,7 @@ class APIManager {
     
     func requestWeight(weightData: WeightData,  completion: @escaping (_ data :WeightData) -> Void) {
         requestSingleWeight(weightData: weightData, type: .daily, completion: completion)
+//        requestSingleWeight(weightData: weightData, type: .weekly, completion: completion)
     }
     
     func requestSingleSitting(sittingData: SittingData, type: RequestType,  completion: @escaping (_ data :SittingData) -> Void){

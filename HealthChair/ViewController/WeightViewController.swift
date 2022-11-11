@@ -10,21 +10,24 @@ import Charts
 
 class WeightViewController: UIViewController {
     @IBOutlet var lineChartView: LineChartView!
+    
+    var weightData: WeightData!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        setUpGraph()
+        print(weightData.weeklyData)
+        setUpGraph(rawData: weightData.weeklyData)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.title = "体重"
     }
     
-    func setUpGraph(){
-        let rawData: [Int] = [72, 74, 70, 69, 68, 70, 71]
-        let entries = rawData.enumerated().map { BarChartDataEntry(x: Double($0.offset), y: Double($0.element)) }
+    func setUpGraph(rawData: [WeightUnit]){
+        let floatData: [Float] = rawData.map { $0.value }
+        let entries = floatData.enumerated().map { BarChartDataEntry(x: Double($0.offset), y: Double($0.element)) }
         let dataSet = LineChartDataSet(entries: entries)
         dataSet.drawValuesEnabled = false
         dataSet.colors = [.systemOrange]
@@ -72,7 +75,6 @@ public class LineChartFormatter: NSObject, AxisValueFormatter{
     let dayNames: [String]! = ["Sun","Mon", "Tue", "Wed", "Thu", "Fri","Sat"]
     
     public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        // 0 -> Jan, 1 -> Feb...
         return dayNames[Int(value)]
     }
 }

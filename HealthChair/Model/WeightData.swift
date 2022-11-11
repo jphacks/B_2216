@@ -11,9 +11,16 @@ import Foundation
 struct WeightData : Codable {
     var dailyData: [WeightUnit] = [] {
         didSet {
+            var cnt = 0
             dailyMean = 0
             for singleData in dailyData {
-                dailyMean += singleData.value / Float(dailyData.count)
+                if singleData.value != 0 {
+                    cnt += 1
+                    dailyMean += singleData.value
+                }
+            }
+            if cnt != 0{
+                dailyMean /= Float(cnt)
             }
         }
     }

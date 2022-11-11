@@ -110,6 +110,7 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     @objc func weightCardViewTapped(_ sender: UITapGestureRecognizer) {
         let storyboard: UIStoryboard = UIStoryboard(name: "WeightViewController", bundle: nil)
         let weightViewController = storyboard.instantiateViewController(withIdentifier: "WeightViewController") as! WeightViewController
+        weightViewController.weightData = weightData
         self.show(weightViewController, sender: nil)
     }
     
