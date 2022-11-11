@@ -317,13 +317,13 @@
                     <navigationItem key="navigationItem" id="0NC-67-UMG"/>
                     <connections>
                         <outlet property="circularview" destination="1dL-Tn-Tr2" id="7nJ-ZN-OVw"/>
-                        <outlet property="kilogramLabel" destination="pxZ-6M-kBb" id="JEe-Ed-uqd"/>
                         <outlet property="label" destination="k6F-ov-yap" id="sa4-s7-bm3"/>
                         <outlet property="realtimeCardView" destination="2os-Am-X1f" id="zfK-4s-zhE"/>
                         <outlet property="sittingCardView" destination="Atx-3S-3nE" id="rbE-ad-WGH"/>
                         <outlet property="sittingHourLabel" destination="fVs-Tj-Yyr" id="bzT-ec-qt0"/>
                         <outlet property="sittingMinuteLabel" destination="9eE-Lk-XPw" id="dgp-sc-8vb"/>
                         <outlet property="weightCardView" destination="4r1-3u-Rg1" id="LJJ-kr-IB5"/>
+                        <outlet property="weightLabel" destination="pxZ-6M-kBb" id="ASo-3t-mwX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WDd-NM-AOk" sceneMemberID="firstResponder"/>
