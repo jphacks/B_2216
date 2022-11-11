@@ -32,6 +32,20 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
         
         setup()
         
+        let content = UNMutableNotificationContent()
+        content.title = "タイトル"
+        content.subtitle = "サブタイトル"
+        content.body = "タップしてアプリを開いてください"
+        content.sound = UNNotificationSound.default
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
+        let request = UNNotificationRequest(identifier: "Timer", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if let error = error {
+                print("hello", error.localizedDescription)
+            }
+        }
+        
         sittingCardView.addGestureRecognizer(
             UITapGestureRecognizer(
                 target: self,

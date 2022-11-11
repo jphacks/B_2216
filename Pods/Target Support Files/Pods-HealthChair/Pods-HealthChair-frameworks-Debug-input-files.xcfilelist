@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-HealthChair/Pods-HealthChair-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/MBCircularProgressBar/MBCircularProgressBar.framework
+${BUILT_PRODUCTS_DIR}/NWPusher/NWPusher.framework

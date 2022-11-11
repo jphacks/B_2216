@@ -7,4 +7,5 @@ target 'HealthChair' do
 
   # Pods for HealthChair
   pod "MBCircularProgressBar"
+  pod 'NWPusher', '~> 0.7.0'
 end

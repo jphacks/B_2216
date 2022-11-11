@@ -7,29 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EAF3D3A4225750A85D9907D125497E9 /* MBCircularProgressBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 691C811B4A5ED1B7DB5F9270093249F8 /* MBCircularProgressBarLayer.m */; };
-		2018B8EEBB508956A8FD7C74A42FD143 /* MBCircularProgressBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98BED3DF66EFFFE5E67A271E405B2E9D /* MBCircularProgressBar-dummy.m */; };
-		3AF59972CF9DE7354BF21402CC674065 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		58974A5F534E80F61488285E3B235C03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		9A2923EE6EC1969B993224C9B29D2273 /* MBCircularProgressBarLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA98EA0E0582CAD6B3DC8C6C54277F9F /* MBCircularProgressBarLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4BB9632B410AE70CCEC18CA02F4C48E /* MBCircularProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5620B37CD31A5CF57FFAF2E609E79C59 /* MBCircularProgressBarView.m */; };
-		BB640E657EABA5A5629D544C11059E7E /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = 720E67C63738FE0942D869C8BE3FA45A /* example.png */; };
-		CCCC3058CA8FCD02B9D38E7F50F56D83 /* MBCircularProgressBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = EED82E4B81BA3E7859A623C182F5EDF7 /* MBCircularProgressBarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D2B2EAB7265470295296DADF396687DC /* Pods-HealthChair-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB1ED05DC8E0A566FD57EAF1CFCB26F3 /* Pods-HealthChair-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D498AAC87060F42250805FC8477923CD /* Pods-HealthChair-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 773D7A84530A4CB26FA7253C8EA84E6F /* Pods-HealthChair-dummy.m */; };
-		F0A2A519EDFE8BF62530A46DEC8E8402 /* MBCircularProgressBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B691CC3631F58858DC8202FDA8FA3F0 /* MBCircularProgressBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		027882549080BB0543FC3F69C184F66A /* Pods-HealthChair-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB1ED05DC8E0A566FD57EAF1CFCB26F3 /* Pods-HealthChair-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04B7A6BAC5A4167352C12181F950DAA9 /* NWPushFeedback.h in Headers */ = {isa = PBXBuildFile; fileRef = A0ACEE17455DABE9E7FDEBE3E3773905 /* NWPushFeedback.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EAF3D3A4225750A85D9907D125497E9 /* MBCircularProgressBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD57EB33CCFDBCF71390C3405D493E6 /* MBCircularProgressBarLayer.m */; };
+		1A38F4CFEB158B250D54B1A17AA76D9B /* NWSSLConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = A94914CFA508D0B416E924E0DA7C9920 /* NWSSLConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2018B8EEBB508956A8FD7C74A42FD143 /* MBCircularProgressBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CFF3D4236EA2E5DA4A939C31B9EE70A /* MBCircularProgressBar-dummy.m */; };
+		2B029A98308E51BA01CBC85D6DA84566 /* NWNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = A45E83AF8CC4A8828C2911FFADE2D59A /* NWNotification.m */; };
+		3786B5AC5F232FAE2B623D7AC8612F1D /* NWPusher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0E481CB9EA501FF440281844715C97 /* NWPusher.m */; };
+		3AF59972CF9DE7354BF21402CC674065 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */; };
+		4B48F8F2194DB6C5CE67F6DE727D7B64 /* NWPusher.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AFFC7D9E06295EED0BB0B79B0E6B235 /* NWPusher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4EC16CD1D5738F660B10460B67FE72FB /* NWSecTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C5C1449AAD49D0D230CA848F375F1B9 /* NWSecTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54B242EBAEF30DED204FA09484E474E9 /* NWNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 26D904B8C864D053E0473B69B4D7F57D /* NWNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5520565C13FBB03BA0684FE61F805339 /* NWPushFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = F7810E139CE27D87EC1587F60C5AD153 /* NWPushFeedback.m */; };
+		5DE40E710EA3FC2720D770FD31A1D036 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */; };
+		6E326016154E39F51BA897929C2982DF /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DDA91FA72A76004255060ACD8133FDF /* example.png */; };
+		6F66DF7289F56A143B77BEE3F6A2CC9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */; };
+		97F8A455FF2021FDB27865209BA13359 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B2A0B779CE31153B2C0D8A7F8DC7FE /* Security.framework */; };
+		9A2923EE6EC1969B993224C9B29D2273 /* MBCircularProgressBarLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F998FE48DBEA690BBEE4F4EC3DF8D6E /* MBCircularProgressBarLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D3D3ADEF94ED5B920DB6E3FB47879F3 /* NWPusher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE3495DE1CC50D6E30E3033B84341D6 /* NWPusher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0E42F7B817DE1AD2B90F138FDEAE5B1 /* NWType.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ADD05D2C6C95D7932FF4C6935B22448 /* NWType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A578DD04D2A7B6D9F2E0BCC1C9848631 /* Pods-HealthChair-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 773D7A84530A4CB26FA7253C8EA84E6F /* Pods-HealthChair-dummy.m */; };
+		B4BB9632B410AE70CCEC18CA02F4C48E /* MBCircularProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A7FBA9243DA957C60DFCB5D4ECD8DB /* MBCircularProgressBarView.m */; };
+		B791403DA67E21A6D553D98C5394AAF7 /* NWPusher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 568E970105A3073D833356BCF9BCBD9E /* NWPusher-dummy.m */; };
+		BE8B3BB1E6BEEC5F83AD7B3C639E9109 /* NWType.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8E3E4353BAE4D585D09528A42EADB1 /* NWType.m */; };
+		C606B9F43D1F172E95080AFBBC9536D9 /* NWSecTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EAA77379D683EE03FFBEA235A8350F /* NWSecTools.m */; };
+		CCCC3058CA8FCD02B9D38E7F50F56D83 /* MBCircularProgressBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FDF9215B0229312EFCBCB988E54CCEB /* MBCircularProgressBarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4BC7763AEE33FAE47D9AA610FBA3B22 /* NWHub.h in Headers */ = {isa = PBXBuildFile; fileRef = EBBA1087DA5A30EC1E1EACABDAA9494E /* NWHub.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E771D4764F0771B1EFAF6FAD9B73DC86 /* NWSSLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = B561B6F5667CD50ED20EB97A91CE3A1B /* NWSSLConnection.m */; };
+		F0A2A519EDFE8BF62530A46DEC8E8402 /* MBCircularProgressBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E0B7339F564F59BA0F7978CCF6561AC /* MBCircularProgressBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F19C698DA0C0DE5096EACCDE63A174D0 /* MBCircularProgressBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7CB12AE789452060456EBCEC68360820 /* MBCircularProgressBar.bundle */; };
+		F9CCEE9113B47EF8B64B552FEA0F74B9 /* NWHub.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E1366AD3930B7E052B95A96CC220BC /* NWHub.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		134F6B27F672B198726C17DDBE27E0C3 /* PBXContainerItemProxy */ = {
+		24F93F8133068E8B049713962A23D153 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 46FA1E1D7ABC29B96888E2D9085D474F;
 			remoteInfo = MBCircularProgressBar;
 		};
-		A9B35D72E0351C5A9B69A81365AF2AC9 /* PBXContainerItemProxy */ = {
+		D058D6FA420ADB079F42A76C1ECC8B9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDA9E7A5A2444C2617625D5CB306E974;
+			remoteInfo = NWPusher;
+		};
+		D3B148D8AAEBF1C00805034584D2B4BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -40,32 +65,55 @@
 
 /* Begin PBXFileReference section */
 		0273236D91B838CBCBF1F157BDCE2A17 /* Pods-HealthChair-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HealthChair-frameworks.sh"; sourceTree = "<group>"; };
+		0F998FE48DBEA690BBEE4F4EC3DF8D6E /* MBCircularProgressBarLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MBCircularProgressBarLayer.h; path = Pod/Classes/MBCircularProgressBarLayer.h; sourceTree = "<group>"; };
+		1ADD05D2C6C95D7932FF4C6935B22448 /* NWType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NWType.h; path = Classes/NWType.h; sourceTree = "<group>"; };
+		1B8E3E4353BAE4D585D09528A42EADB1 /* NWType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NWType.m; path = Classes/NWType.m; sourceTree = "<group>"; };
 		20C28B1D2687D1B448811883384BA14A /* Pods-HealthChair.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HealthChair.debug.xcconfig"; sourceTree = "<group>"; };
-		4B691CC3631F58858DC8202FDA8FA3F0 /* MBCircularProgressBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBCircularProgressBar-umbrella.h"; sourceTree = "<group>"; };
+		2528B1D0A73BD67DE8EFCE8A55BD12E0 /* NWPusher-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NWPusher-Info.plist"; sourceTree = "<group>"; };
+		26D904B8C864D053E0473B69B4D7F57D /* NWNotification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NWNotification.h; path = Classes/NWNotification.h; sourceTree = "<group>"; };
+		29A7FBA9243DA957C60DFCB5D4ECD8DB /* MBCircularProgressBarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MBCircularProgressBarView.m; path = Pod/Classes/MBCircularProgressBarView.m; sourceTree = "<group>"; };
+		2FDF9215B0229312EFCBCB988E54CCEB /* MBCircularProgressBarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MBCircularProgressBarView.h; path = Pod/Classes/MBCircularProgressBarView.h; sourceTree = "<group>"; };
+		4AFFC7D9E06295EED0BB0B79B0E6B235 /* NWPusher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NWPusher.h; path = Classes/NWPusher.h; sourceTree = "<group>"; };
+		4C5C1449AAD49D0D230CA848F375F1B9 /* NWSecTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NWSecTools.h; path = Classes/NWSecTools.h; sourceTree = "<group>"; };
+		50702A220EA97BE551083585C1BF9A29 /* MBCircularProgressBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBCircularProgressBar.release.xcconfig; sourceTree = "<group>"; };
 		532468790747BBF3A19D4180B9C78A35 /* Pods-HealthChair-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HealthChair-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5620B37CD31A5CF57FFAF2E609E79C59 /* MBCircularProgressBarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MBCircularProgressBarView.m; path = Pod/Classes/MBCircularProgressBarView.m; sourceTree = "<group>"; };
-		5C51A3E3DD6FF38BAA30C336E0153AE0 /* ResourceBundle-MBCircularProgressBar-MBCircularProgressBar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-MBCircularProgressBar-MBCircularProgressBar-Info.plist"; sourceTree = "<group>"; };
+		568E970105A3073D833356BCF9BCBD9E /* NWPusher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NWPusher-dummy.m"; sourceTree = "<group>"; };
+		5968804D33950BBA31C58BDF7E162A57 /* NWPusher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NWPusher-prefix.pch"; sourceTree = "<group>"; };
+		5B043D58BB6E7AA6058400D4D1AFA3C3 /* MBCircularProgressBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBCircularProgressBar-prefix.pch"; sourceTree = "<group>"; };
+		5E0B7339F564F59BA0F7978CCF6561AC /* MBCircularProgressBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBCircularProgressBar-umbrella.h"; sourceTree = "<group>"; };
+		63C2D7168A0F4F63DB94CDE9846C9D8D /* MBCircularProgressBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBCircularProgressBar.modulemap; sourceTree = "<group>"; };
 		640B2CA36D53D84D0129B12A7FAC2E0B /* MBCircularProgressBar */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBCircularProgressBar; path = MBCircularProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66ECAC0CF957E3AB2BCEC411A931ECC0 /* Pods-HealthChair */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-HealthChair"; path = Pods_HealthChair.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		691C811B4A5ED1B7DB5F9270093249F8 /* MBCircularProgressBarLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MBCircularProgressBarLayer.m; path = Pod/Classes/MBCircularProgressBarLayer.m; sourceTree = "<group>"; };
-		720E67C63738FE0942D869C8BE3FA45A /* example.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = example.png; path = Pod/Assets/example.png; sourceTree = "<group>"; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		70BAEA61FF0F4396A12A33A131155410 /* NWPusher */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NWPusher; path = NWPusher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		773D7A84530A4CB26FA7253C8EA84E6F /* Pods-HealthChair-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HealthChair-dummy.m"; sourceTree = "<group>"; };
 		7CB12AE789452060456EBCEC68360820 /* MBCircularProgressBar.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBCircularProgressBar.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DDA91FA72A76004255060ACD8133FDF /* example.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = example.png; path = Pod/Assets/example.png; sourceTree = "<group>"; };
+		7E0E481CB9EA501FF440281844715C97 /* NWPusher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NWPusher.m; path = Classes/NWPusher.m; sourceTree = "<group>"; };
+		80E1D9749C2B6B04B99105368BD67E6F /* NWPusher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NWPusher.modulemap; sourceTree = "<group>"; };
+		8C98FA6635DC3D80CFA2F0F991C4BF06 /* NWPusher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NWPusher.release.xcconfig; sourceTree = "<group>"; };
 		8F87C07218BAF790F80895951FDD5645 /* Pods-HealthChair.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HealthChair.modulemap"; sourceTree = "<group>"; };
 		910FB531C808ED4E9EA3E103F86ED102 /* Pods-HealthChair-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HealthChair-Info.plist"; sourceTree = "<group>"; };
-		98BED3DF66EFFFE5E67A271E405B2E9D /* MBCircularProgressBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBCircularProgressBar-dummy.m"; sourceTree = "<group>"; };
+		952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9CFF3D4236EA2E5DA4A939C31B9EE70A /* MBCircularProgressBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBCircularProgressBar-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A277C29DFA7BB910CED15F7A883EF23F /* MBCircularProgressBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBCircularProgressBar-prefix.pch"; sourceTree = "<group>"; };
+		A0ACEE17455DABE9E7FDEBE3E3773905 /* NWPushFeedback.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NWPushFeedback.h; path = Classes/NWPushFeedback.h; sourceTree = "<group>"; };
 		A3EAAF526C10489154BDE4ACB696C67B /* Pods-HealthChair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HealthChair.release.xcconfig"; sourceTree = "<group>"; };
-		B69ACF1DFD985A8B15D94696B1218E70 /* MBCircularProgressBar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MBCircularProgressBar-Info.plist"; sourceTree = "<group>"; };
-		C2323EA88B983011D22582C0630B14E9 /* MBCircularProgressBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBCircularProgressBar.modulemap; sourceTree = "<group>"; };
-		C8DDCAC5526523646ECDE2163C7A203F /* MBCircularProgressBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBCircularProgressBar.release.xcconfig; sourceTree = "<group>"; };
+		A45E83AF8CC4A8828C2911FFADE2D59A /* NWNotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NWNotification.m; path = Classes/NWNotification.m; sourceTree = "<group>"; };
+		A53BA34A9EA1E3E6C71B0F3D9D508947 /* ResourceBundle-MBCircularProgressBar-MBCircularProgressBar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-MBCircularProgressBar-MBCircularProgressBar-Info.plist"; sourceTree = "<group>"; };
+		A94914CFA508D0B416E924E0DA7C9920 /* NWSSLConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NWSSLConnection.h; path = Classes/NWSSLConnection.h; sourceTree = "<group>"; };
+		B4EAA77379D683EE03FFBEA235A8350F /* NWSecTools.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NWSecTools.m; path = Classes/NWSecTools.m; sourceTree = "<group>"; };
+		B561B6F5667CD50ED20EB97A91CE3A1B /* NWSSLConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NWSSLConnection.m; path = Classes/NWSSLConnection.m; sourceTree = "<group>"; };
+		C3B2A0B779CE31153B2C0D8A7F8DC7FE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		CA51CE45019CCDA03F713A9FBB9AD219 /* Pods-HealthChair-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HealthChair-acknowledgements.plist"; sourceTree = "<group>"; };
-		DBAAAE3C3199DF22FA227A80A170A8EE /* MBCircularProgressBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBCircularProgressBar.debug.xcconfig; sourceTree = "<group>"; };
-		EA98EA0E0582CAD6B3DC8C6C54277F9F /* MBCircularProgressBarLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MBCircularProgressBarLayer.h; path = Pod/Classes/MBCircularProgressBarLayer.h; sourceTree = "<group>"; };
+		CBE3495DE1CC50D6E30E3033B84341D6 /* NWPusher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NWPusher-umbrella.h"; sourceTree = "<group>"; };
+		D595FE026BF1FEA3FA5A53A23853A65F /* MBCircularProgressBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBCircularProgressBar.debug.xcconfig; sourceTree = "<group>"; };
+		DAD22290034AEE3004EFD7B06B551E0F /* MBCircularProgressBar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MBCircularProgressBar-Info.plist"; sourceTree = "<group>"; };
+		DFD57EB33CCFDBCF71390C3405D493E6 /* MBCircularProgressBarLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MBCircularProgressBarLayer.m; path = Pod/Classes/MBCircularProgressBarLayer.m; sourceTree = "<group>"; };
 		EB1ED05DC8E0A566FD57EAF1CFCB26F3 /* Pods-HealthChair-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HealthChair-umbrella.h"; sourceTree = "<group>"; };
-		EED82E4B81BA3E7859A623C182F5EDF7 /* MBCircularProgressBarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MBCircularProgressBarView.h; path = Pod/Classes/MBCircularProgressBarView.h; sourceTree = "<group>"; };
+		EBBA1087DA5A30EC1E1EACABDAA9494E /* NWHub.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NWHub.h; path = Classes/NWHub.h; sourceTree = "<group>"; };
+		F77B970F9B947E8522B7363C3545A249 /* NWPusher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NWPusher.debug.xcconfig; sourceTree = "<group>"; };
+		F7810E139CE27D87EC1587F60C5AD153 /* NWPushFeedback.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NWPushFeedback.m; path = Classes/NWPushFeedback.m; sourceTree = "<group>"; };
+		F8E1366AD3930B7E052B95A96CC220BC /* NWHub.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NWHub.m; path = Classes/NWHub.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,18 +125,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B748A8E5970184132C6ABB3B21DDC3A3 /* Frameworks */ = {
+		75DE0AF0A3ADFBC2ED3021E27A9F076E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F66DF7289F56A143B77BEE3F6A2CC9F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		803C94C47DC6C16771E385DFE584B0EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB647C1116D161454BD92C2BBBEA7CFF /* Frameworks */ = {
+		8327A559E280DB3162F2B3CF2807579C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58974A5F534E80F61488285E3B235C03 /* Foundation.framework in Frameworks */,
+				5DE40E710EA3FC2720D770FD31A1D036 /* Foundation.framework in Frameworks */,
+				97F8A455FF2021FDB27865209BA13359 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,12 +169,36 @@
 			path = "Target Support Files/Pods-HealthChair";
 			sourceTree = "<group>";
 		};
-		299AE029C1607461426F6C50EE722F14 /* Resources */ = {
+		0958C7CA6A1C86C7DB17B10823D76F63 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				720E67C63738FE0942D869C8BE3FA45A /* example.png */,
+				63C2D7168A0F4F63DB94CDE9846C9D8D /* MBCircularProgressBar.modulemap */,
+				9CFF3D4236EA2E5DA4A939C31B9EE70A /* MBCircularProgressBar-dummy.m */,
+				DAD22290034AEE3004EFD7B06B551E0F /* MBCircularProgressBar-Info.plist */,
+				5B043D58BB6E7AA6058400D4D1AFA3C3 /* MBCircularProgressBar-prefix.pch */,
+				5E0B7339F564F59BA0F7978CCF6561AC /* MBCircularProgressBar-umbrella.h */,
+				D595FE026BF1FEA3FA5A53A23853A65F /* MBCircularProgressBar.debug.xcconfig */,
+				50702A220EA97BE551083585C1BF9A29 /* MBCircularProgressBar.release.xcconfig */,
+				A53BA34A9EA1E3E6C71B0F3D9D508947 /* ResourceBundle-MBCircularProgressBar-MBCircularProgressBar-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MBCircularProgressBar";
+			sourceTree = "<group>";
+		};
+		0E544E64EF1E715F5728BFD0629B825A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7DDA91FA72A76004255060ACD8133FDF /* example.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CE426AC267333500FABE7BA0A5A42A0 /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		417692E6D562720F68FB72DAF123F581 /* Targets Support Files */ = {
@@ -128,78 +209,94 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		98436566CD55EAEE0AE6AF7A50953A03 /* MBCircularProgressBar */ = {
-			isa = PBXGroup;
-			children = (
-				EA98EA0E0582CAD6B3DC8C6C54277F9F /* MBCircularProgressBarLayer.h */,
-				691C811B4A5ED1B7DB5F9270093249F8 /* MBCircularProgressBarLayer.m */,
-				EED82E4B81BA3E7859A623C182F5EDF7 /* MBCircularProgressBarView.h */,
-				5620B37CD31A5CF57FFAF2E609E79C59 /* MBCircularProgressBarView.m */,
-				299AE029C1607461426F6C50EE722F14 /* Resources */,
-				EE1DEFE3082347251E98DB605FD8B096 /* Support Files */,
-			);
-			path = MBCircularProgressBar;
-			sourceTree = "<group>";
-		};
-		9DF07EEAEFCB779523E6E0FC9B0B4A57 /* Products */ = {
+		58808D770532F35C49556DBCB99EF7A0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				640B2CA36D53D84D0129B12A7FAC2E0B /* MBCircularProgressBar */,
 				7CB12AE789452060456EBCEC68360820 /* MBCircularProgressBar.bundle */,
+				70BAEA61FF0F4396A12A33A131155410 /* NWPusher */,
 				66ECAC0CF957E3AB2BCEC411A931ECC0 /* Pods-HealthChair */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B5E3767EAE7FC3CB9A50FD65ED126ACF /* Pods */ = {
+		5A929CC23A5F8C90F8BD80E8B9016D93 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				98436566CD55EAEE0AE6AF7A50953A03 /* MBCircularProgressBar */,
+				768438456413759BAF6308E25DC88EEF /* MBCircularProgressBar */,
+				6B41314D7B17AE194114750F520084FA /* NWPusher */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6B41314D7B17AE194114750F520084FA /* NWPusher */ = {
+			isa = PBXGroup;
+			children = (
+				EBBA1087DA5A30EC1E1EACABDAA9494E /* NWHub.h */,
+				F8E1366AD3930B7E052B95A96CC220BC /* NWHub.m */,
+				26D904B8C864D053E0473B69B4D7F57D /* NWNotification.h */,
+				A45E83AF8CC4A8828C2911FFADE2D59A /* NWNotification.m */,
+				4AFFC7D9E06295EED0BB0B79B0E6B235 /* NWPusher.h */,
+				7E0E481CB9EA501FF440281844715C97 /* NWPusher.m */,
+				A0ACEE17455DABE9E7FDEBE3E3773905 /* NWPushFeedback.h */,
+				F7810E139CE27D87EC1587F60C5AD153 /* NWPushFeedback.m */,
+				4C5C1449AAD49D0D230CA848F375F1B9 /* NWSecTools.h */,
+				B4EAA77379D683EE03FFBEA235A8350F /* NWSecTools.m */,
+				A94914CFA508D0B416E924E0DA7C9920 /* NWSSLConnection.h */,
+				B561B6F5667CD50ED20EB97A91CE3A1B /* NWSSLConnection.m */,
+				1ADD05D2C6C95D7932FF4C6935B22448 /* NWType.h */,
+				1B8E3E4353BAE4D585D09528A42EADB1 /* NWType.m */,
+				97EA44F06E0B34546BE96B54FCBC4EAB /* Support Files */,
+			);
+			path = NWPusher;
+			sourceTree = "<group>";
+		};
+		768438456413759BAF6308E25DC88EEF /* MBCircularProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				0F998FE48DBEA690BBEE4F4EC3DF8D6E /* MBCircularProgressBarLayer.h */,
+				DFD57EB33CCFDBCF71390C3405D493E6 /* MBCircularProgressBarLayer.m */,
+				2FDF9215B0229312EFCBCB988E54CCEB /* MBCircularProgressBarView.h */,
+				29A7FBA9243DA957C60DFCB5D4ECD8DB /* MBCircularProgressBarView.m */,
+				0E544E64EF1E715F5728BFD0629B825A /* Resources */,
+				0958C7CA6A1C86C7DB17B10823D76F63 /* Support Files */,
+			);
+			path = MBCircularProgressBar;
+			sourceTree = "<group>";
+		};
+		7CE426AC267333500FABE7BA0A5A42A0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				952925E838A0DE4D7BDC4EE54022633D /* Foundation.framework */,
+				C3B2A0B779CE31153B2C0D8A7F8DC7FE /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		97EA44F06E0B34546BE96B54FCBC4EAB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				80E1D9749C2B6B04B99105368BD67E6F /* NWPusher.modulemap */,
+				568E970105A3073D833356BCF9BCBD9E /* NWPusher-dummy.m */,
+				2528B1D0A73BD67DE8EFCE8A55BD12E0 /* NWPusher-Info.plist */,
+				5968804D33950BBA31C58BDF7E162A57 /* NWPusher-prefix.pch */,
+				CBE3495DE1CC50D6E30E3033B84341D6 /* NWPusher-umbrella.h */,
+				F77B970F9B947E8522B7363C3545A249 /* NWPusher.debug.xcconfig */,
+				8C98FA6635DC3D80CFA2F0F991C4BF06 /* NWPusher.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/NWPusher";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				B5E3767EAE7FC3CB9A50FD65ED126ACF /* Pods */,
-				9DF07EEAEFCB779523E6E0FC9B0B4A57 /* Products */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				5A929CC23A5F8C90F8BD80E8B9016D93 /* Pods */,
+				58808D770532F35C49556DBCB99EF7A0 /* Products */,
 				417692E6D562720F68FB72DAF123F581 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EE1DEFE3082347251E98DB605FD8B096 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C2323EA88B983011D22582C0630B14E9 /* MBCircularProgressBar.modulemap */,
-				98BED3DF66EFFFE5E67A271E405B2E9D /* MBCircularProgressBar-dummy.m */,
-				B69ACF1DFD985A8B15D94696B1218E70 /* MBCircularProgressBar-Info.plist */,
-				A277C29DFA7BB910CED15F7A883EF23F /* MBCircularProgressBar-prefix.pch */,
-				4B691CC3631F58858DC8202FDA8FA3F0 /* MBCircularProgressBar-umbrella.h */,
-				DBAAAE3C3199DF22FA227A80A170A8EE /* MBCircularProgressBar.debug.xcconfig */,
-				C8DDCAC5526523646ECDE2163C7A203F /* MBCircularProgressBar.release.xcconfig */,
-				5C51A3E3DD6FF38BAA30C336E0153AE0 /* ResourceBundle-MBCircularProgressBar-MBCircularProgressBar-Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/MBCircularProgressBar";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,11 +312,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		950D40111F05C4592867FBB2EAC345C4 /* Headers */ = {
+		614924B9598091CDF504B3C5F0941003 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2B2EAB7265470295296DADF396687DC /* Pods-HealthChair-umbrella.h in Headers */,
+				027882549080BB0543FC3F69C184F66A /* Pods-HealthChair-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DCAAA0E064AC1DEF0CF62608CEDDC66 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4BC7763AEE33FAE47D9AA610FBA3B22 /* NWHub.h in Headers */,
+				54B242EBAEF30DED204FA09484E474E9 /* NWNotification.h in Headers */,
+				4B48F8F2194DB6C5CE67F6DE727D7B64 /* NWPusher.h in Headers */,
+				9D3D3ADEF94ED5B920DB6E3FB47879F3 /* NWPusher-umbrella.h in Headers */,
+				04B7A6BAC5A4167352C12181F950DAA9 /* NWPushFeedback.h in Headers */,
+				4EC16CD1D5738F660B10460B67FE72FB /* NWSecTools.h in Headers */,
+				1A38F4CFEB158B250D54B1A17AA76D9B /* NWSSLConnection.h in Headers */,
+				A0E42F7B817DE1AD2B90F138FDEAE5B1 /* NWType.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,17 +340,18 @@
 /* Begin PBXNativeTarget section */
 		144553360EBE17BD673764B684EC4294 /* Pods-HealthChair */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9A9B3BE625A8A101B268F993A1728F20 /* Build configuration list for PBXNativeTarget "Pods-HealthChair" */;
+			buildConfigurationList = D19EC8281D8E9006405918B0205358DA /* Build configuration list for PBXNativeTarget "Pods-HealthChair" */;
 			buildPhases = (
-				950D40111F05C4592867FBB2EAC345C4 /* Headers */,
-				48F4E0B2D795496B2754BB78BE3B47A2 /* Sources */,
-				EB647C1116D161454BD92C2BBBEA7CFF /* Frameworks */,
-				C3A7A79E0A9C3A8680F56B2C90E4AB1C /* Resources */,
+				614924B9598091CDF504B3C5F0941003 /* Headers */,
+				EC49D297186FCC8A966768607BBD0B8A /* Sources */,
+				75DE0AF0A3ADFBC2ED3021E27A9F076E /* Frameworks */,
+				2C407B9A165CF3EE52BAD702CA7D8128 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AA88AD4493BA01B158CC497DAFB5352A /* PBXTargetDependency */,
+				D85F4D6AFBD996CDD1A59F58555F7B81 /* PBXTargetDependency */,
+				FDB3139FD790EC7A731790BD2342B9B2 /* PBXTargetDependency */,
 			);
 			name = "Pods-HealthChair";
 			productName = Pods_HealthChair;
@@ -257,7 +370,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				40DA2B07098971972DD02090DA83720F /* PBXTargetDependency */,
+				C70BEF9203366DCCD1B07A0DE5604534 /* PBXTargetDependency */,
 			);
 			name = MBCircularProgressBar;
 			productName = MBCircularProgressBar;
@@ -266,11 +379,11 @@
 		};
 		8BA5E348E64AFAB335EC680A67122E64 /* MBCircularProgressBar-MBCircularProgressBar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 847D906798263392A22F959DC7E328D8 /* Build configuration list for PBXNativeTarget "MBCircularProgressBar-MBCircularProgressBar" */;
+			buildConfigurationList = 895038301DCF1F7297425645C12AAFBB /* Build configuration list for PBXNativeTarget "MBCircularProgressBar-MBCircularProgressBar" */;
 			buildPhases = (
-				33C4DA139E5D4CF46ADE01B1A027DC82 /* Sources */,
-				B748A8E5970184132C6ABB3B21DDC3A3 /* Frameworks */,
-				3011C0E2EDBBF051E4BD12A635D22CAD /* Resources */,
+				66B71A04B97AB2C08247CB9327A7FBF3 /* Sources */,
+				803C94C47DC6C16771E385DFE584B0EC /* Frameworks */,
+				21CE7BD5C2F4D55932FE596FF116617D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -280,6 +393,24 @@
 			productName = MBCircularProgressBar;
 			productReference = 7CB12AE789452060456EBCEC68360820 /* MBCircularProgressBar.bundle */;
 			productType = "com.apple.product-type.bundle";
+		};
+		BDA9E7A5A2444C2617625D5CB306E974 /* NWPusher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C6C605E4043CDB67F177DD0A8A849F8 /* Build configuration list for PBXNativeTarget "NWPusher" */;
+			buildPhases = (
+				7DCAAA0E064AC1DEF0CF62608CEDDC66 /* Headers */,
+				139EF6E406CA0443CB940050DAB81190 /* Sources */,
+				8327A559E280DB3162F2B3CF2807579C /* Frameworks */,
+				F7677DB2019AB02DFFD7DBD9994C04DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NWPusher;
+			productName = NWPusher;
+			productReference = 70BAEA61FF0F4396A12A33A131155410 /* NWPusher */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -299,18 +430,27 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 9DF07EEAEFCB779523E6E0FC9B0B4A57 /* Products */;
+			productRefGroup = 58808D770532F35C49556DBCB99EF7A0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				46FA1E1D7ABC29B96888E2D9085D474F /* MBCircularProgressBar */,
 				8BA5E348E64AFAB335EC680A67122E64 /* MBCircularProgressBar-MBCircularProgressBar */,
+				BDA9E7A5A2444C2617625D5CB306E974 /* NWPusher */,
 				144553360EBE17BD673764B684EC4294 /* Pods-HealthChair */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		21CE7BD5C2F4D55932FE596FF116617D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E326016154E39F51BA897929C2982DF /* example.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		25728E4AFAFE1E1E731EBE0C7F9EF2A6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,15 +459,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3011C0E2EDBBF051E4BD12A635D22CAD /* Resources */ = {
+		2C407B9A165CF3EE52BAD702CA7D8128 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB640E657EABA5A5629D544C11059E7E /* example.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3A7A79E0A9C3A8680F56B2C90E4AB1C /* Resources */ = {
+		F7677DB2019AB02DFFD7DBD9994C04DA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -337,18 +476,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		33C4DA139E5D4CF46ADE01B1A027DC82 /* Sources */ = {
+		139EF6E406CA0443CB940050DAB81190 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9CCEE9113B47EF8B64B552FEA0F74B9 /* NWHub.m in Sources */,
+				2B029A98308E51BA01CBC85D6DA84566 /* NWNotification.m in Sources */,
+				3786B5AC5F232FAE2B623D7AC8612F1D /* NWPusher.m in Sources */,
+				B791403DA67E21A6D553D98C5394AAF7 /* NWPusher-dummy.m in Sources */,
+				5520565C13FBB03BA0684FE61F805339 /* NWPushFeedback.m in Sources */,
+				C606B9F43D1F172E95080AFBBC9536D9 /* NWSecTools.m in Sources */,
+				E771D4764F0771B1EFAF6FAD9B73DC86 /* NWSSLConnection.m in Sources */,
+				BE8B3BB1E6BEEC5F83AD7B3C639E9109 /* NWType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		48F4E0B2D795496B2754BB78BE3B47A2 /* Sources */ = {
+		66B71A04B97AB2C08247CB9327A7FBF3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D498AAC87060F42250805FC8477923CD /* Pods-HealthChair-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,27 +508,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EC49D297186FCC8A966768607BBD0B8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A578DD04D2A7B6D9F2E0BCC1C9848631 /* Pods-HealthChair-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		40DA2B07098971972DD02090DA83720F /* PBXTargetDependency */ = {
+		C70BEF9203366DCCD1B07A0DE5604534 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "MBCircularProgressBar-MBCircularProgressBar";
 			target = 8BA5E348E64AFAB335EC680A67122E64 /* MBCircularProgressBar-MBCircularProgressBar */;
-			targetProxy = A9B35D72E0351C5A9B69A81365AF2AC9 /* PBXContainerItemProxy */;
+			targetProxy = D3B148D8AAEBF1C00805034584D2B4BF /* PBXContainerItemProxy */;
 		};
-		AA88AD4493BA01B158CC497DAFB5352A /* PBXTargetDependency */ = {
+		D85F4D6AFBD996CDD1A59F58555F7B81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MBCircularProgressBar;
 			target = 46FA1E1D7ABC29B96888E2D9085D474F /* MBCircularProgressBar */;
-			targetProxy = 134F6B27F672B198726C17DDBE27E0C3 /* PBXContainerItemProxy */;
+			targetProxy = 24F93F8133068E8B049713962A23D153 /* PBXContainerItemProxy */;
+		};
+		FDB3139FD790EC7A731790BD2342B9B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NWPusher;
+			target = BDA9E7A5A2444C2617625D5CB306E974 /* NWPusher */;
+			targetProxy = D058D6FA420ADB079F42A76C1ECC8B9E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		00B2315BE612316635932618FF6A64FD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8DDCAC5526523646ECDE2163C7A203F /* MBCircularProgressBar.release.xcconfig */;
+			baseConfigurationReference = 50702A220EA97BE551083585C1BF9A29 /* MBCircularProgressBar.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -415,47 +575,9 @@
 			};
 			name = Release;
 		};
-		10C74B3A59160926ED8D15A072A99159 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3EAAF526C10489154BDE4ACB696C67B /* Pods-HealthChair.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-HealthChair/Pods-HealthChair-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HealthChair/Pods-HealthChair.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		1F686D321CC940AD2FE01F2CA4AC8A78 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBAAAE3C3199DF22FA227A80A170A8EE /* MBCircularProgressBar.debug.xcconfig */;
+			baseConfigurationReference = D595FE026BF1FEA3FA5A53A23853A65F /* MBCircularProgressBar.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -549,26 +671,47 @@
 			};
 			name = Release;
 		};
-		4482FCF4956FAFA43908F50F148FBED0 /* Debug */ = {
+		37BB0FC4F2F80BC80CE23C644C77F544 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBAAAE3C3199DF22FA227A80A170A8EE /* MBCircularProgressBar.debug.xcconfig */;
+			baseConfigurationReference = A3EAAF526C10489154BDE4ACB696C67B /* Pods-HealthChair.release.xcconfig */;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/MBCircularProgressBar";
-				DEVELOPMENT_TEAM = 377B7BZZ6Z;
-				IBSC_MODULE = MBCircularProgressBar;
-				INFOPLIST_FILE = "Target Support Files/MBCircularProgressBar/ResourceBundle-MBCircularProgressBar-MBCircularProgressBar-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = MBCircularProgressBar;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HealthChair/Pods-HealthChair-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HealthChair/Pods-HealthChair.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		914B0E724928BE37F097A5C30153D165 /* Release */ = {
+		429F8B0BEF93EEB9C71ED9A1A6E82576 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8DDCAC5526523646ECDE2163C7A203F /* MBCircularProgressBar.release.xcconfig */;
+			baseConfigurationReference = 50702A220EA97BE551083585C1BF9A29 /* MBCircularProgressBar.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/MBCircularProgressBar";
 				DEVELOPMENT_TEAM = 377B7BZZ6Z;
@@ -583,7 +726,41 @@
 			};
 			name = Release;
 		};
-		D0967359D922ED261FFEEEEBC6E0E7C3 /* Debug */ = {
+		A98DF34CC2664FD08B3C245ED992B0EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F77B970F9B947E8522B7363C3545A249 /* NWPusher.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NWPusher/NWPusher-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NWPusher/NWPusher-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/NWPusher/NWPusher.modulemap";
+				PRODUCT_MODULE_NAME = NWPusher;
+				PRODUCT_NAME = NWPusher;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B7D9B2C6E476A30EA51AD723040B43F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 20C28B1D2687D1B448811883384BA14A /* Pods-HealthChair.debug.xcconfig */;
 			buildSettings = {
@@ -619,6 +796,58 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		DDC16E3E330F2B69BC22BA3216EC20FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D595FE026BF1FEA3FA5A53A23853A65F /* MBCircularProgressBar.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/MBCircularProgressBar";
+				DEVELOPMENT_TEAM = 377B7BZZ6Z;
+				IBSC_MODULE = MBCircularProgressBar;
+				INFOPLIST_FILE = "Target Support Files/MBCircularProgressBar/ResourceBundle-MBCircularProgressBar-MBCircularProgressBar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = MBCircularProgressBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		F3242DEFDAE27885895118F6FC210FC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C98FA6635DC3D80CFA2F0F991C4BF06 /* NWPusher.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NWPusher/NWPusher-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NWPusher/NWPusher-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/NWPusher/NWPusher.modulemap";
+				PRODUCT_MODULE_NAME = NWPusher;
+				PRODUCT_NAME = NWPusher;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		F4FF6A0D1970CA9705974E3CB2134802 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -689,6 +918,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1C6C605E4043CDB67F177DD0A8A849F8 /* Build configuration list for PBXNativeTarget "NWPusher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98DF34CC2664FD08B3C245ED992B0EA /* Debug */,
+				F3242DEFDAE27885895118F6FC210FC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -707,20 +945,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		847D906798263392A22F959DC7E328D8 /* Build configuration list for PBXNativeTarget "MBCircularProgressBar-MBCircularProgressBar" */ = {
+		895038301DCF1F7297425645C12AAFBB /* Build configuration list for PBXNativeTarget "MBCircularProgressBar-MBCircularProgressBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4482FCF4956FAFA43908F50F148FBED0 /* Debug */,
-				914B0E724928BE37F097A5C30153D165 /* Release */,
+				DDC16E3E330F2B69BC22BA3216EC20FC /* Debug */,
+				429F8B0BEF93EEB9C71ED9A1A6E82576 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9A9B3BE625A8A101B268F993A1728F20 /* Build configuration list for PBXNativeTarget "Pods-HealthChair" */ = {
+		D19EC8281D8E9006405918B0205358DA /* Build configuration list for PBXNativeTarget "Pods-HealthChair" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D0967359D922ED261FFEEEEBC6E0E7C3 /* Debug */,
-				10C74B3A59160926ED8D15A072A99159 /* Release */,
+				B7D9B2C6E476A30EA51AD723040B43F7 /* Debug */,
+				37BB0FC4F2F80BC80CE23C644C77F544 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
