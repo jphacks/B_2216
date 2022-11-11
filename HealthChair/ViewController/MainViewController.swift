@@ -10,9 +10,29 @@ import MBCircularProgressBar
 
 class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     
-    @IBOutlet var sittingCardView: UIView!
-    @IBOutlet var weightCardView: UIView!
-    @IBOutlet var realtimeCardView: UIView!
+    @IBOutlet var sittingCardView: UIView! {
+        didSet {
+            sittingCardView.layer.cornerRadius = 16
+            sittingCardView.addGestureRecognizer(
+                UITapGestureRecognizer(
+                    target: self,
+                    action: #selector(self.sittingCardViewTapped(_:))))
+        }
+    }
+    @IBOutlet var weightCardView: UIView! {
+        didSet {
+            weightCardView.layer.cornerRadius = 16
+            weightCardView.addGestureRecognizer(
+                UITapGestureRecognizer(
+                    target: self,
+                    action: #selector(self.weightCardViewTapped(_:))))
+        }
+    }
+    @IBOutlet var realtimeCardView: UIView! {
+        didSet {
+            realtimeCardView.layer.cornerRadius = 16
+        }
+    }
     
     @IBOutlet var label: UILabel!
     @IBOutlet var circularview: MBCircularProgressBarView!
@@ -46,24 +66,10 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
             }
         }
         
-        sittingCardView.addGestureRecognizer(
-            UITapGestureRecognizer(
-                target: self,
-                action: #selector(self.sittingCardViewTapped(_:))))
-        
-        weightCardView.addGestureRecognizer(
-            UITapGestureRecognizer(
-                target: self,
-                action: #selector(self.weightCardViewTapped(_:))))
-        
         navigationItem.backBarButtonItem = .init(title: "概要", style: .plain, target: nil, action: nil)
     }
     
     func setup() {
-        sittingCardView.layer.cornerRadius = 16
-        weightCardView.layer.cornerRadius = 16
-        realtimeCardView.layer.cornerRadius = 16
-        
         circularview.isHidden = false
         label.isHidden = true
         
@@ -79,8 +85,8 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
             guard let self = self else { return }
             self.sittingData = sittingData
             DispatchQueue.main.async {
-                self.sittingHourLabel.text = String(Int(sittingData.dailySum) / 60)
-                self.sittingMinuteLabel.text = String(Int(sittingData.dailySum) % 60)
+                self.sittingHourLabel.text = String(Int(sittingData.dailySum * 60) / 60)
+                self.sittingMinuteLabel.text = String(Int(sittingData.dailySum * 60) % 60)
             }
             print(sittingData)
         })
@@ -97,6 +103,7 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     @objc func sittingCardViewTapped(_ sender: UITapGestureRecognizer) {
         let storyboard: UIStoryboard = UIStoryboard(name: "SittingTimeViewController", bundle: nil)
         let sittingTimeViewController = storyboard.instantiateViewController(withIdentifier: "SittingTimeViewController") as! SittingTimeViewController
+        sittingTimeViewController.sittingData = sittingData
         self.show(sittingTimeViewController, sender: nil)
     }
     

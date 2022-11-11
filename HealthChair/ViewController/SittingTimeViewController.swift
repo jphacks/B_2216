@@ -13,13 +13,14 @@ class SittingTimeViewController: UIViewController {
     @IBOutlet var hourLabel: UILabel!
     @IBOutlet var minuteLabel: UILabel!
     
-    var SittingData: SittingData?
+    var sittingData: SittingData!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         // getRequest()
+        setUpGraph(rawData: sittingData.dailyData)
         updateUI()
     }
     
@@ -27,8 +28,9 @@ class SittingTimeViewController: UIViewController {
         navigationItem.title = "座った時間"
     }
 
-    func setUpGraph(rawData: [Float]){
-        let entries = rawData.enumerated().map { BarChartDataEntry(x: Double($0.offset), y: Double($0.element)) }
+    func setUpGraph(rawData: [SittingUnit]){
+        let floatData: [Float] = rawData.map{ $0.hours * 60 }
+        let entries = floatData.enumerated().map { BarChartDataEntry(x: Double($0.offset), y: Double($0.element)) }
         let dataSet = BarChartDataSet(entries: entries)
         dataSet.drawValuesEnabled = false
         dataSet.colors = [.systemOrange]
@@ -60,9 +62,9 @@ class SittingTimeViewController: UIViewController {
     }
     
     func updateUI(){
-        self.hourLabel.text = String(Int(SittingData?.dailySum ?? 0) / 60)
-        self.minuteLabel.text = String(Int(SittingData?.dailySum ?? 0) % 60)
-        setUpGraph(rawData: SittingData?.dailyData.map{ $0.hours } ?? [])
+        self.hourLabel.text = String(Int(sittingData.dailySum * 60) / 60)
+        self.minuteLabel.text = String(Int(sittingData.dailySum * 60) % 60)
+        setUpGraph(rawData: sittingData.dailyData)
     }
     
 //    func getRequest() {

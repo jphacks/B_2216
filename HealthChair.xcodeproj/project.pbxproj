@@ -10,6 +10,7 @@
 		8314E01AD5244B8A036D3358 /* Pods_HealthChair.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB4CEFB9189A668137E3B8B /* Pods_HealthChair.framework */; };
 		C5129C13291E7ECC004213C8 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5129C12291E7ECC004213C8 /* NotificationService.swift */; };
 		C5129C17291E7ECC004213C8 /* NotificationService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C5129C10291E7ECC004213C8 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C5129C1F291E995C004213C8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5129C1E291E995C004213C8 /* Endpoint.swift */; };
 		C514E3B628FBCC0500BBB4E6 /* sample_dairy.json in Resources */ = {isa = PBXBuildFile; fileRef = C514E3B428FBC97C00BBB4E6 /* sample_dairy.json */; };
 		C514E3B928FBDCF500BBB4E6 /* SittingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514E3B828FBDCF500BBB4E6 /* SittingData.swift */; };
 		C514E3BB28FC520000BBB4E6 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514E3BA28FC520000BBB4E6 /* WeightViewController.swift */; };
@@ -64,6 +65,7 @@
 		C5129C12291E7ECC004213C8 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		C5129C14291E7ECC004213C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5129C1C291E86A4004213C8 /* NotificationService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationService.entitlements; sourceTree = "<group>"; };
+		C5129C1E291E995C004213C8 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		C514E3B428FBC97C00BBB4E6 /* sample_dairy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sample_dairy.json; sourceTree = "<group>"; };
 		C514E3B828FBDCF500BBB4E6 /* SittingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingData.swift; sourceTree = "<group>"; };
 		C514E3BA28FC520000BBB4E6 /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,14 @@
 			path = NotificationService;
 			sourceTree = "<group>";
 		};
+		C5129C1D291E993F004213C8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C5129C1E291E995C004213C8 /* Endpoint.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		C514E3B528FBCBBE00BBB4E6 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,8 +183,10 @@
 		C52D13B028EDEC3700D44472 /* HealthChair */ = {
 			isa = PBXGroup;
 			children = (
+				C5129C1D291E993F004213C8 /* Utils */,
 				C5129C0B291CE31D004213C8 /* HealthChair.entitlements */,
 				C514E3B728FBDCDA00BBB4E6 /* Model */,
+				C55AA59A2902EE2A00F9307C /* Manager */,
 				C59A2E9028FB08D7009EBC43 /* ViewController */,
 				C52D13B128EDEC3700D44472 /* AppDelegate.swift */,
 				C52D13B328EDEC3700D44472 /* SceneDelegate.swift */,
@@ -182,7 +194,6 @@
 				C52D13BC28EDEC3800D44472 /* LaunchScreen.storyboard */,
 				C52D13BF28EDEC3800D44472 /* Info.plist */,
 				C514E3B528FBCBBE00BBB4E6 /* Resource */,
-				C55AA59A2902EE2A00F9307C /* Manager */,
 			);
 			path = HealthChair;
 			sourceTree = "<group>";
@@ -388,6 +399,7 @@
 				C57A8A9B2913B4B2005B389A /* WeightUnit.swift in Sources */,
 				C55AA59128FF0DC500F9307C /* ConnectViewController.swift in Sources */,
 				C514E3BB28FC520000BBB4E6 /* WeightViewController.swift in Sources */,
+				C5129C1F291E995C004213C8 /* Endpoint.swift in Sources */,
 				C55AA5952902B5DA00F9307C /* BluetoothManager.swift in Sources */,
 				C5CE280B2903522F00692FA0 /* APIManager.swift in Sources */,
 				C52D13B628EDEC3700D44472 /* MainViewController.swift in Sources */,

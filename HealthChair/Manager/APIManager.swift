@@ -10,7 +10,7 @@ import Foundation
 class APIManager {
     let udManager = UserDefaultsManager.shared
     
-    let baseUrl:String = "https://api.jphacks2022.so298.net/data"
+    let baseUrl:String = Endpoint.MOCK_URL
     
     var userId: String {
         // String(udManager.getUserId())
