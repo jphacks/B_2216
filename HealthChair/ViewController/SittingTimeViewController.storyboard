@@ -94,17 +94,86 @@
                                     <constraint firstItem="abX-Zd-soB" firstAttribute="top" secondItem="zza-dw-A6c" secondAttribute="bottom" id="vOz-MV-CW2"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アドバイス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaU-ES-GUl">
+                                <rect key="frame" x="32.000000000000007" y="502.00000000000006" width="121.66666666666669" height="28.666666666666686"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E94-If-sZf" userLabel="Comment Card View">
+                                <rect key="frame" x="24" y="546.66666666666663" width="342" height="160"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nuf-Ko-hKf">
+                                        <rect key="frame" x="16" y="15.999999999999998" width="145.66666666666666" height="20.333333333333329"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chair" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XXl-9c-dRF">
+                                                <rect key="frame" x="0.0" y="0.33333333333333215" width="16.333333333333332" height="20"/>
+                                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="座っていた時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSd-zr-hzr">
+                                                <rect key="frame" x="24.333333333333336" y="0.0" width="121.33333333333331" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwi-bc-vkV">
+                                        <rect key="frame" x="16" y="57.666666666666742" width="190.66666666666666" height="61"/>
+                                        <string key="text">先週に比べて平均24%
+減少しています
+立つ習慣を継続しよう！</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCz-DX-K7n">
+                                        <rect key="frame" x="218.33333333333334" y="67.666666666666742" width="67.666666666666657" height="40.666666666666657"/>
+                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sLO-wr-wxu">
+                                        <rect key="frame" x="286" y="69.333333333333314" width="40" height="37.666666666666671"/>
+                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Xj7-0V-ita"/>
+                                            <constraint firstAttribute="width" constant="40" id="jgZ-tU-5Wj"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="sLO-wr-wxu" firstAttribute="centerY" secondItem="E94-If-sZf" secondAttribute="centerY" constant="8" id="3MM-uq-oGH"/>
+                                    <constraint firstItem="hwi-bc-vkV" firstAttribute="leading" secondItem="E94-If-sZf" secondAttribute="leading" constant="16" id="I2O-fQ-KYk"/>
+                                    <constraint firstItem="nuf-Ko-hKf" firstAttribute="top" secondItem="E94-If-sZf" secondAttribute="top" constant="16" id="KvB-Ff-fj5"/>
+                                    <constraint firstAttribute="trailing" secondItem="sLO-wr-wxu" secondAttribute="trailing" constant="16" id="OPV-Th-Ae0"/>
+                                    <constraint firstAttribute="height" constant="160" id="Qy1-BC-N1f"/>
+                                    <constraint firstItem="oCz-DX-K7n" firstAttribute="centerY" secondItem="E94-If-sZf" secondAttribute="centerY" constant="8" id="XWh-tS-MM5"/>
+                                    <constraint firstItem="sLO-wr-wxu" firstAttribute="leading" secondItem="oCz-DX-K7n" secondAttribute="trailing" id="dg8-Nl-3Fu"/>
+                                    <constraint firstItem="nuf-Ko-hKf" firstAttribute="leading" secondItem="E94-If-sZf" secondAttribute="leading" constant="16" id="dxA-xk-Cwn"/>
+                                    <constraint firstItem="hwi-bc-vkV" firstAttribute="centerY" secondItem="E94-If-sZf" secondAttribute="centerY" constant="8" id="eVe-a9-gAN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JeI-px-2Ft"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
+                            <constraint firstItem="jaU-ES-GUl" firstAttribute="leading" secondItem="JeI-px-2Ft" secondAttribute="leading" constant="32" id="0LL-5Q-JsF"/>
+                            <constraint firstItem="E94-If-sZf" firstAttribute="leading" secondItem="JeI-px-2Ft" secondAttribute="leading" constant="24" id="EKL-kQ-qev"/>
+                            <constraint firstItem="E94-If-sZf" firstAttribute="centerX" secondItem="bXB-rL-YDC" secondAttribute="centerX" id="I3b-zv-Fbd"/>
+                            <constraint firstItem="E94-If-sZf" firstAttribute="top" secondItem="jaU-ES-GUl" secondAttribute="bottom" constant="16" id="NU1-LH-xm9"/>
                             <constraint firstItem="1Uy-81-DJ6" firstAttribute="leading" secondItem="JeI-px-2Ft" secondAttribute="leading" id="Yvx-Bm-Zv3"/>
                             <constraint firstItem="JeI-px-2Ft" firstAttribute="trailing" secondItem="1Uy-81-DJ6" secondAttribute="trailing" id="dZ5-uw-hLR"/>
+                            <constraint firstItem="JeI-px-2Ft" firstAttribute="trailing" secondItem="E94-If-sZf" secondAttribute="trailing" constant="24" id="mc0-OE-GpS"/>
                             <constraint firstItem="1Uy-81-DJ6" firstAttribute="top" secondItem="JeI-px-2Ft" secondAttribute="top" id="o4L-y4-WHA"/>
+                            <constraint firstItem="jaU-ES-GUl" firstAttribute="top" secondItem="1Uy-81-DJ6" secondAttribute="bottom" constant="16" id="uZ1-ph-wIs"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="barChartView" destination="NNk-3y-cdB" id="Uou-TU-aWS"/>
+                        <outlet property="commentCardView" destination="E94-If-sZf" id="gMV-n6-UqO"/>
                         <outlet property="hourLabel" destination="ZIF-nh-NBJ" id="DRF-2N-crM"/>
                         <outlet property="minuteLabel" destination="AQV-ZR-Bkf" id="8qg-KC-4YO"/>
                         <outlet property="sumOrMeanLabel" destination="dWe-A4-bUg" id="OFu-5F-BAz"/>
@@ -116,11 +185,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.down" catalog="system" width="118" height="128"/>
+        <image name="chair" catalog="system" width="104" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

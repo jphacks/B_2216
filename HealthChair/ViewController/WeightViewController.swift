@@ -13,6 +13,12 @@ class WeightViewController: UIViewController {
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var weightLabel: UILabel!
     
+    @IBOutlet var commentCardView: UIView! {
+        didSet {
+            commentCardView.layer.cornerRadius = 16
+        }
+    }
+    
     var weightData: WeightData!
 
     override func viewDidLoad() {

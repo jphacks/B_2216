@@ -14,6 +14,12 @@ class SittingTimeViewController: UIViewController {
     @IBOutlet var minuteLabel: UILabel!
     @IBOutlet var sumOrMeanLabel: UILabel!
     
+    @IBOutlet var commentCardView: UIView! {
+        didSet {
+            commentCardView.layer.cornerRadius = 16
+        }
+    }
+    
     var sittingData: SittingData!
    
     override func viewDidLoad() {
@@ -89,7 +95,7 @@ class SittingTimeViewController: UIViewController {
             sumOrMeanLabel.text = "平均"
             setUpGraph(rawData: sittingData.monthlyData,
                        xFormatter: Formatter.MonthlyFormatter(),
-                       yFormatter: Formatter.MinutesFormatter())
+                       yFormatter: Formatter.HoursFormatter())
         }
     }
     
