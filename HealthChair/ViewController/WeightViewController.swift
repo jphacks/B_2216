@@ -11,6 +11,7 @@ import Charts
 class WeightViewController: UIViewController {
     @IBOutlet var lineChartView: LineChartView!
     @IBOutlet var segmentedControl: UISegmentedControl!
+    @IBOutlet var weightLabel: UILabel!
     
     var weightData: WeightData!
 
@@ -19,6 +20,7 @@ class WeightViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         segmentedControl.selectedSegmentIndex = Term.weekly.rawValue
+        weightLabel.text = String(Int(weightData.weeklyMean))
         setUpGraph(rawData: weightData.weeklyData, xFormatter: Formatter.WeeklyFormatter(), yFormatter: Formatter.KiloGramFormatter())
     }
     
@@ -70,18 +72,21 @@ class WeightViewController: UIViewController {
                 xFormatter: Formatter.DailyFormatter(),
                 yFormatter: Formatter.KiloGramFormatter()
             )
+            weightLabel.text = String(Int(weightData.dailyMean))
         case .weekly:
             setUpGraph(
                 rawData: weightData.weeklyData,
                 xFormatter: Formatter.WeeklyFormatter(),
                 yFormatter: Formatter.KiloGramFormatter()
             )
+            weightLabel.text = String(Int(weightData.weeklyMean))
         case .monthly:
             setUpGraph(
                rawData: weightData.monthlyData,
                xFormatter: Formatter.MonthlyFormatter(),
                yFormatter: Formatter.KiloGramFormatter()
             )
+            weightLabel.text = String(Int(weightData.monthlyMean))
         }
     }
     

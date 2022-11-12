@@ -25,7 +25,7 @@ class Formatter {
     
     public class MonthlyFormatter: NSObject, AxisValueFormatter{
         public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-            return Int(value) % 5 == 1 ? String(value) : ""
+            return String(Int(value)) + "日"
         }
     }
     

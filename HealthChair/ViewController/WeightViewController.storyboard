@@ -94,6 +94,7 @@
                     <connections>
                         <outlet property="lineChartView" destination="uKE-gC-h4N" id="Nw9-me-doR"/>
                         <outlet property="segmentedControl" destination="sKg-13-N2i" id="qzQ-Ci-aSd"/>
+                        <outlet property="weightLabel" destination="wNT-jz-8gK" id="69k-VZ-uqz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="93w-jS-yx4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

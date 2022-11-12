@@ -107,6 +107,7 @@
                         <outlet property="barChartView" destination="NNk-3y-cdB" id="Uou-TU-aWS"/>
                         <outlet property="hourLabel" destination="ZIF-nh-NBJ" id="DRF-2N-crM"/>
                         <outlet property="minuteLabel" destination="AQV-ZR-Bkf" id="8qg-KC-4YO"/>
+                        <outlet property="sumOrMeanLabel" destination="dWe-A4-bUg" id="OFu-5F-BAz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQT-LF-4ES" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
