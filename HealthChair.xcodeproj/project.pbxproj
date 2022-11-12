@@ -13,6 +13,12 @@
 		C5129C1F291E995C004213C8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5129C1E291E995C004213C8 /* Endpoint.swift */; };
 		C5129C21291F33FF004213C8 /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5129C20291F33FF004213C8 /* Term.swift */; };
 		C5129C23291F383F004213C8 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5129C22291F383F004213C8 /* Formatter.swift */; };
+		C5129C26291F5FEF004213C8 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5129C25291F5FEF004213C8 /* SettingViewController.swift */; };
+		C5129C28291F6005004213C8 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5129C27291F6005004213C8 /* SettingViewController.storyboard */; };
+		C5129C2A291F6471004213C8 /* SettingTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5129C29291F6471004213C8 /* SettingTableCell.swift */; };
+		C5129C2D291F6E3A004213C8 /* SettingWifiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5129C2B291F6E3A004213C8 /* SettingWifiViewController.swift */; };
+		C5129C30291F6E4E004213C8 /* SettingWifiViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5129C2F291F6E4E004213C8 /* SettingWifiViewController.storyboard */; };
+		C5129C32291F70C9004213C8 /* WifiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5129C31291F70C9004213C8 /* WifiData.swift */; };
 		C514E3B628FBCC0500BBB4E6 /* sample_dairy.json in Resources */ = {isa = PBXBuildFile; fileRef = C514E3B428FBC97C00BBB4E6 /* sample_dairy.json */; };
 		C514E3B928FBDCF500BBB4E6 /* SittingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514E3B828FBDCF500BBB4E6 /* SittingData.swift */; };
 		C514E3BB28FC520000BBB4E6 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514E3BA28FC520000BBB4E6 /* WeightViewController.swift */; };
@@ -70,6 +76,12 @@
 		C5129C1E291E995C004213C8 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		C5129C20291F33FF004213C8 /* Term.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Term.swift; sourceTree = "<group>"; };
 		C5129C22291F383F004213C8 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		C5129C25291F5FEF004213C8 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		C5129C27291F6005004213C8 /* SettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingViewController.storyboard; sourceTree = "<group>"; };
+		C5129C29291F6471004213C8 /* SettingTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableCell.swift; sourceTree = "<group>"; };
+		C5129C2B291F6E3A004213C8 /* SettingWifiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingWifiViewController.swift; sourceTree = "<group>"; };
+		C5129C2F291F6E4E004213C8 /* SettingWifiViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingWifiViewController.storyboard; sourceTree = "<group>"; };
+		C5129C31291F70C9004213C8 /* WifiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiData.swift; sourceTree = "<group>"; };
 		C514E3B428FBC97C00BBB4E6 /* sample_dairy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sample_dairy.json; sourceTree = "<group>"; };
 		C514E3B828FBDCF500BBB4E6 /* SittingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingData.swift; sourceTree = "<group>"; };
 		C514E3BA28FC520000BBB4E6 /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +157,20 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		C5129C24291F50B0004213C8 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				C55AA59028FF0DC500F9307C /* ConnectViewController.swift */,
+				C55AA59228FF0DD300F9307C /* ConnectViewController.storyboard */,
+				C5129C25291F5FEF004213C8 /* SettingViewController.swift */,
+				C5129C27291F6005004213C8 /* SettingViewController.storyboard */,
+				C5129C29291F6471004213C8 /* SettingTableCell.swift */,
+				C5129C2B291F6E3A004213C8 /* SettingWifiViewController.swift */,
+				C5129C2F291F6E4E004213C8 /* SettingWifiViewController.storyboard */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		C514E3B528FBCBBE00BBB4E6 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +188,7 @@
 				C57A8A982913B3C6005B389A /* WeightData.swift */,
 				C57A8A9A2913B4B2005B389A /* WeightUnit.swift */,
 				C5129C20291F33FF004213C8 /* Term.swift */,
+				C5129C31291F70C9004213C8 /* WifiData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,14 +244,13 @@
 		C59A2E9028FB08D7009EBC43 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C5129C24291F50B0004213C8 /* Setting */,
 				C52D13B528EDEC3700D44472 /* MainViewController.swift */,
 				C52D13B728EDEC3700D44472 /* Main.storyboard */,
 				C593B56C28F16A7C006C10AC /* SittingTimeViewController.swift */,
 				C593B56E28F16A9F006C10AC /* SittingTimeViewController.storyboard */,
 				C514E3BA28FC520000BBB4E6 /* WeightViewController.swift */,
 				C514E3BC28FC521500BBB4E6 /* WeightViewController.storyboard */,
-				C55AA59028FF0DC500F9307C /* ConnectViewController.swift */,
-				C55AA59228FF0DD300F9307C /* ConnectViewController.storyboard */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -334,6 +360,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5129C30291F6E4E004213C8 /* SettingWifiViewController.storyboard in Resources */,
+				C5129C28291F6005004213C8 /* SettingViewController.storyboard in Resources */,
 				C514E3B628FBCC0500BBB4E6 /* sample_dairy.json in Resources */,
 				C55AA59328FF0DD300F9307C /* ConnectViewController.storyboard in Resources */,
 				C52D13BE28EDEC3800D44472 /* LaunchScreen.storyboard in Resources */,
@@ -402,16 +430,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				C55AA5972902BA5A00F9307C /* RawData.swift in Sources */,
+				C5129C2A291F6471004213C8 /* SettingTableCell.swift in Sources */,
 				C57A8A9B2913B4B2005B389A /* WeightUnit.swift in Sources */,
 				C55AA59128FF0DC500F9307C /* ConnectViewController.swift in Sources */,
 				C514E3BB28FC520000BBB4E6 /* WeightViewController.swift in Sources */,
 				C5129C1F291E995C004213C8 /* Endpoint.swift in Sources */,
+				C5129C2D291F6E3A004213C8 /* SettingWifiViewController.swift in Sources */,
+				C5129C26291F5FEF004213C8 /* SettingViewController.swift in Sources */,
 				C55AA5952902B5DA00F9307C /* BluetoothManager.swift in Sources */,
 				C5CE280B2903522F00692FA0 /* APIManager.swift in Sources */,
 				C52D13B628EDEC3700D44472 /* MainViewController.swift in Sources */,
 				C5CE280E2903606800692FA0 /* SittingUnit.swift in Sources */,
 				C514E3B928FBDCF500BBB4E6 /* SittingData.swift in Sources */,
 				C55AA5992902CFBE00F9307C /* UserDefaultsManager.swift in Sources */,
+				C5129C32291F70C9004213C8 /* WifiData.swift in Sources */,
 				C5129C23291F383F004213C8 /* Formatter.swift in Sources */,
 				C52D13B228EDEC3700D44472 /* AppDelegate.swift in Sources */,
 				C593B56D28F16A7C006C10AC /* SittingTimeViewController.swift in Sources */,
@@ -632,7 +664,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 377B7BZZ6Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HealthChair/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = C;
+				INFOPLIST_KEY_CFBundleDisplayName = "Health Chair";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -671,7 +703,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 377B7BZZ6Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HealthChair/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = C;
+				INFOPLIST_KEY_CFBundleDisplayName = "Health Chair";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -13,4 +13,5 @@ struct RawData: Codable {
     let w1:Float
     let w2:Float
     let w3:Float
+    let wifi:Bool
 }

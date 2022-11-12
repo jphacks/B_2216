@@ -26,6 +26,7 @@ class BluetoothManager: NSObject {
     var charcteristicUUIDs: [CBUUID]!
     
     var isConnected = false
+    var isWifi = false
     
     static let shared = BluetoothManager()
     let usManager = UserDefaultsManager.shared
@@ -51,6 +52,17 @@ class BluetoothManager: NSObject {
         }
         let writeData = str.data(using: .utf8)!
         peripheral.writeValue(writeData, for: kRXCBCharacteristic, type: .withResponse)
+    }
+    
+    func sendWifi(ssid: String, password: String){
+        guard let kRXCBCharacteristic = kRXCBCharacteristic else {
+            return
+        }
+        let wifidata = WifiData(ssid: ssid, pass: password)
+        let encoder = JSONEncoder()
+        if let writeData = try? encoder.encode(wifidata) {
+            peripheral.writeValue(writeData, for: kRXCBCharacteristic, type: .withResponse)
+        }
     }
     
     func calibrate(){
@@ -190,6 +202,7 @@ extension BluetoothManager: CBPeripheralDelegate {
         let decoder = JSONDecoder()
         do {
             let data = try decoder.decode(RawData.self,from: data)
+            isWifi = data.wifi
             delegate?.dataUpdated(rawData: data)
             print("data", data)
         } catch let parseError {

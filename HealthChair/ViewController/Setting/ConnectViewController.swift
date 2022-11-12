@@ -65,7 +65,6 @@ class ConnectViewController: UIViewController {
 
 extension ConnectViewController: BluetoothManagerDelegate {
     func connected() {
-        self.bluetoothManager.calibrate()
         self.titleLabel.text = "ペアリングが完了しました"
         self.timer?.invalidate()
         self.Circle1.isHidden = false

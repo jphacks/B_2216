@@ -107,6 +107,12 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
             }
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("come back")
+        bluetoothManager.delegate = self
+        setup()
+    }
 
     @objc func sittingCardViewTapped(_ sender: UITapGestureRecognizer) {
         let storyboard: UIStoryboard = UIStoryboard(name: "SittingTimeViewController", bundle: nil)
@@ -123,16 +129,14 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @IBAction func settingButtonTapped(_ sender: UITapGestureRecognizer) {
-        if !bluetoothManager.isConnected {
-            let storyboard: UIStoryboard = UIStoryboard(name: "ConnectViewController", bundle: nil)
-            let connectViewController = storyboard.instantiateViewController(withIdentifier: "ConnectViewController") as! ConnectViewController
-            connectViewController.presentationController?.delegate = self
-            self.present(connectViewController, animated: true)
-        }
+        let storyboard: UIStoryboard = UIStoryboard(name: "SettingViewController", bundle: nil)
+        let settingViewController = storyboard.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
+        settingViewController.presentationController?.delegate = self
+        self.show(settingViewController, sender: nil)
     }
     
     @IBAction func calibrateTapped(_ sender: UITapGestureRecognizer){
-        bluetoothManager.sendData(str: "calibrate")
+        bluetoothManager.calibrate()
     }
 }
 
@@ -155,8 +159,6 @@ extension MainViewController: BluetoothManagerDelegate {
 
 extension MainViewController: UIAdaptivePresentationControllerDelegate {
     func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-        print("come back")
-        bluetoothManager.delegate = self
-        setup()
+        
     }
 }
