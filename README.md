@@ -17,14 +17,7 @@
 ![image2](resources/2.png)
 
 ### 製品説明
-手持ちの椅子の足に荷重センサーを取り付けることで、座るだけで体重管理や座っている時間を測定できるデバイス「health chair」を開発しました。
-
-メインボードにはESP32を使用しており、荷重センサの値をHX711というADコンバータから取得しています。
-![image3](resources/3.jpg)
-
-ESP32は各足の荷重センサの値をBLE経由でiOS、WiFi経由でサーバーに送信します。サーバーでは送られてきたデータを保存し、座っている時間等の統計を取ります。iOSではESP32から直接送信される荷重データを受け取り、リアルタイムで体重を表示します。また、サーバーから統計データを受信し、体重の推移や座っている時間をグラフで表示します。
-
-![image4](resources/4.png)
+手持ちの椅子の足に荷重センサーを取り付けることで、座るだけで体重管理や座っている時間を測定できるデバイス「Health Chair」を開発しました。
 
 ### 特長
 #### 1. 椅子に座るだけで健康管理できる！
@@ -37,11 +30,16 @@ ESP32は各足の荷重センサの値をBLE経由でiOS、WiFi経由でサー�
 3. 椅子のBluetoothを選択して接続する
 4. 椅子に座ると、体重がリアルタイムで表示される
 5. iOSアプリから、体重の推移や座っている時間を確認できる
-<!-- 
-|メイン画面|ペアリング画面|座った時間|体重の推移|
-|:---:|:---:|:---:|:---:|
-|![メイン画面1](resources/7.PNG)|![ペアリング画面](resources/5.PNG)|![座った時間](resources/9.PNG)|![image8](resources/8.PNG)|
- -->
+
+### デバイス
+
+メインボードにはESP32を使用しており、荷重センサの値をHX711というADコンバータから取得しています。
+![image3](resources/3.jpg)
+ESP32は各足の荷重センサの値をBLE経由でiOS、WiFi経由でサーバーに送信します。サーバーでは送られてきたデータを保存し、座っている時間等の統計を取ります。iOSではESP32から直接送信される荷重データを受け取り、リアルタイムで体重を表示します。また、サーバーから統計データを受信し、体重の推移や座っている時間をグラフで表示します。
+![image4](resources/4.png)
+
+また、Award Dayに向け、デバイスのブラッシュアップを行いました
+![device](resources/device.png)
 
 ### メイン画面
 
@@ -90,9 +88,11 @@ ESP32は各足の荷重センサの値をBLE経由でiOS、WiFi経由でサー�
 - クライアント
     - Swift
     - Core Bluetooth
-    - Asynchronous Communication
+    - Swift Concurrency
     - 描画ライブラリ(Charts, MBCircularProgressView)
     - Human Interface GuideLine(HIG)
+    - Remote Push Notification
+    - APNs
 - バックエンド
     - Python
     - FastAPI
