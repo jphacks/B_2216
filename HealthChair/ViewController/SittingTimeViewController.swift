@@ -14,14 +14,19 @@ class SittingTimeViewController: UIViewController {
     @IBOutlet var minuteLabel: UILabel!
     
     var sittingData: SittingData!
+    
+    enum Term: Int {
+        case daily = 0
+        case weekly = 1
+        case monthly = 2
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        // getRequest()
         setUpGraph(rawData: sittingData.dailyData)
-        updateUI()
+        updateUI(selectedType: .daily)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,25 +66,26 @@ class SittingTimeViewController: UIViewController {
         barChartView.animate(yAxisDuration: 1, easingOption: .easeOutBack)
     }
     
-    func updateUI(){
-        self.hourLabel.text = String(Int(sittingData.dailySum * 60) / 60)
-        self.minuteLabel.text = String(Int(sittingData.dailySum * 60) % 60)
-        setUpGraph(rawData: sittingData.dailyData)
+    func updateUI(selectedType: Term){
+        switch selectedType {
+        case .daily:
+            self.hourLabel.text = String(Int(sittingData.dailySum * 60) / 60)
+            self.minuteLabel.text = String(Int(sittingData.dailySum * 60) % 60)
+            setUpGraph(rawData: sittingData.dailyData)
+        case.weekly:
+            self.hourLabel.text = String(Int(sittingData.weeklyMean * 60) / 60)
+            self.minuteLabel.text = String(Int(sittingData.weeklyMean * 60) % 60)
+            setUpGraph(rawData: sittingData.weeklyData)
+        case .monthly:
+            self.hourLabel.text = String(Int(sittingData.monthlyMean * 60) / 60)
+            self.minuteLabel.text = String(Int(sittingData.weeklyMean * 60) % 60)
+            setUpGraph(rawData: sittingData.monthlyData)
+        }
     }
     
-//    func getRequest() {
-//        let apiManager = APIManager()
-//        apiManager.requestSitting(params: "/sitting/today",completion: { data in
-//            DispatchQueue.main.async {
-//                self.setUpGraph(rawData: data)
-//                let sum = data.reduce(0,+)
-//                self.hourLabel.text = String(Int(sum) / 60)
-//                self.minuteLabel.text = String(Int(sum) % 60)
-//            }
-//        })
-//    }
-    
     @IBAction func segmentedControlSwitched(_ sender: UISegmentedControl) {
+        var type = Term(rawValue: sender.selectedSegmentIndex) ?? .daily
+        updateUI(selectedType: type)
         print(sender.titleForSegment(at: sender.selectedSegmentIndex)!)
     }
 }
