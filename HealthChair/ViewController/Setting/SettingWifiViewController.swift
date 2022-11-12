@@ -18,7 +18,11 @@ class SettingWifiViewController: UIViewController {
     }
     
     @IBAction func sendClicked(){
-        BluetoothManager.shared.sendWifi(ssid: "TP-Link_0338", password: "09968035")
+        // BluetoothManager.shared.sendWifi(ssid: "TP-Link_0338", password: "09968035")
+        BluetoothManager.shared.sendWifi(
+            ssid: ssidTextField.text ?? "",
+            password: passwordTextField.text ?? ""
+        )
     }
 
 
