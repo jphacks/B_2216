@@ -37,12 +37,30 @@ ESP32は各足の荷重センサの値をBLE経由でiOS、WiFi経由でサー�
 3. 椅子のBluetoothを選択して接続する
 4. 椅子に座ると、体重がリアルタイムで表示される
 5. iOSアプリから、体重の推移や座っている時間を確認できる
-
-
+<!-- 
 |メイン画面|ペアリング画面|座った時間|体重の推移|
-|---|---|---|---|
-|![image7](resources/7.PNG)|![image5](resources/5.PNG)|![image6](resources/6.PNG)|![image8](resources/8.PNG)|
+|:---:|:---:|:---:|:---:|
+|![メイン画面1](resources/7.PNG)|![ペアリング画面](resources/5.PNG)|![座った時間](resources/9.PNG)|![image8](resources/8.PNG)|
+ -->
 
+### メイン画面
+
+|メイン画面1|メイン画面2|
+|:---:|:---:|
+|![メイン画面1](resources/7.PNG)|![メイン画面2](resources/10.jpeg)|
+
+### 設定画面
+
+|設定画面|ペアリング画面|Wifi設定画面|
+|:---:|:---:|:---:|
+|![設定画面](resources/11.PNG)|![ペアリング画面](resources/5.PNG)|![WIFI設定](resources/12.PNG)|
+
+
+### 記録確認画面
+
+|座っていた時間|体重|
+|:---:|:---:|
+|![時間](resources/13.PNG)|![体重](resources/14.PNG)|
 
 ### 解決出来ること
 - 肥満予防や足腰の痛み予防
@@ -101,5 +119,5 @@ ESP32は各足の荷重センサの値をBLE経由でiOS、WiFi経由でサー�
 * 圧力センサーを利用して体重を計測するシステム
 * フロントエンド
   * [Bluetooth接続部分(フロントエンド)](https://github.com/jphacks/B_2216/blob/c26b23d561683fe225e9d722c963b44387111fec/HealthChair/Manager/BluetoothManager.swift)
-  * delegateやcompletionを活用したデータフロー
+  * delegateやcompletionを活用したprotocol指向プログラミング
 
