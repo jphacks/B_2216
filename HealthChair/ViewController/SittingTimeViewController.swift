@@ -88,7 +88,7 @@ class SittingTimeViewController: UIViewController {
             sumOrMeanLabel.text = "平均"
             setUpGraph(rawData: sittingData.weeklyData,
                        xFormatter: Formatter.WeeklyFormatter(),
-                       yFormatter: Formatter.MinutesFormatter())
+                       yFormatter: Formatter.HoursFormatter())
         case .monthly:
             self.hourLabel.text = String(Int(sittingData.monthlyMean * 60) / 60)
             self.minuteLabel.text = String(Int(sittingData.weeklyMean * 60) % 60)

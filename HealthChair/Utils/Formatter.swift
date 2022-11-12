@@ -35,6 +35,12 @@ class Formatter {
         }
     }
     
+    public class HoursFormatter: NSObject, AxisValueFormatter {
+        public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+            return String(Int(value) / 60) + "時間"
+        }
+    }
+    
     public class KiloGramFormatter: NSObject, AxisValueFormatter{
         public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
             // 0 -> Jan, 1 -> Feb...
