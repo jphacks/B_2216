@@ -123,10 +123,16 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @IBAction func settingButtonTapped(_ sender: UITapGestureRecognizer) {
-        let storyboard: UIStoryboard = UIStoryboard(name: "ConnectViewController", bundle: nil)
-        let connectViewController = storyboard.instantiateViewController(withIdentifier: "ConnectViewController") as! ConnectViewController
-        connectViewController.presentationController?.delegate = self
-        self.present(connectViewController, animated: true)
+        if !bluetoothManager.isConnected {
+            let storyboard: UIStoryboard = UIStoryboard(name: "ConnectViewController", bundle: nil)
+            let connectViewController = storyboard.instantiateViewController(withIdentifier: "ConnectViewController") as! ConnectViewController
+            connectViewController.presentationController?.delegate = self
+            self.present(connectViewController, animated: true)
+        }
+    }
+    
+    @IBAction func calibrateTapped(_ sender: UITapGestureRecognizer){
+        bluetoothManager.sendData(str: "calibrate")
     }
 }
 
@@ -140,7 +146,8 @@ extension MainViewController: BluetoothManagerDelegate {
     }
     
     func dataUpdated(rawData: RawData) {
-        circularview.value = CGFloat(rawData.w0 + rawData.w1 + rawData.w2 + rawData.w3)
+        let weight = CGFloat(rawData.w0 + rawData.w1 + rawData.w2 + rawData.w3)
+        circularview.value = weight
         // label.text = String(rawData.w0 + rawData.w1 + rawData.w2 + rawData.w3) + "kg"
     }
     
