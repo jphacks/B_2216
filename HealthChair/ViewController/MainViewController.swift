@@ -34,6 +34,12 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
         }
     }
     
+    @IBOutlet var statusCardView: UIView! {
+        didSet {
+            statusCardView.layer.cornerRadius = 16
+        }
+    }
+    
     @IBOutlet var label: UILabel!
     @IBOutlet var circularview: MBCircularProgressBarView!
     
@@ -41,10 +47,14 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet var sittingMinuteLabel: UILabel!
     @IBOutlet var weightLabel: UILabel!
     
+    @IBOutlet var circleImageView: UIImageView!
+    
     var sittingData = SittingData()
     var weightData = WeightData()
     
     var bluetoothManager = BluetoothManager.shared
+    
+    var center: CGPoint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,21 +62,21 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
         
         setup()
         
-        let content = UNMutableNotificationContent()
-        content.title = "タイトル"
-        content.subtitle = "サブタイトル"
-        content.body = "タップしてアプリを開いてください"
-        content.sound = UNNotificationSound.default
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
-        let request = UNNotificationRequest(identifier: "Timer", content: content, trigger: trigger)
-        
-        UNUserNotificationCenter.current().add(request) { (error) in
-            if let error = error {
-                print("hello", error.localizedDescription)
-            }
-        }
-        
+//        let content = UNMutableNotificationContent()
+//        content.title = "タイトル"
+//        content.subtitle = "サブタイトル"
+//        content.body = "タップしてアプリを開いてください"
+//        content.sound = UNNotificationSound.default
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
+//        let request = UNNotificationRequest(identifier: "Timer", content: content, trigger: trigger)
+//
+//        UNUserNotificationCenter.current().add(request) { (error) in
+//            if let error = error {
+//                print("hello", error.localizedDescription)
+//            }
+//        }
         navigationItem.backBarButtonItem = .init(title: "概要", style: .plain, target: nil, action: nil)
+        center = circleImageView.center
     }
     
     func setup() {
@@ -131,7 +141,6 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func settingButtonTapped(_ sender: UITapGestureRecognizer) {
         let storyboard: UIStoryboard = UIStoryboard(name: "SettingViewController", bundle: nil)
         let settingViewController = storyboard.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
-        settingViewController.presentationController?.delegate = self
         self.show(settingViewController, sender: nil)
     }
     
@@ -152,13 +161,14 @@ extension MainViewController: BluetoothManagerDelegate {
     func dataUpdated(rawData: RawData) {
         let weight = CGFloat(rawData.w0 + rawData.w1 + rawData.w2 + rawData.w3)
         circularview.value = weight
+        let sum = rawData.w0 + rawData.w1 + rawData.w2 + rawData.w3 + 25.0
+        let radius: Float = 50.0
+        let x = (rawData.w0 + rawData.w1 - rawData.w2 - rawData.w3) * radius / sum
+        let y = (rawData.w0 - rawData.w1 - rawData.w2 + rawData.w3) * radius / sum
+        UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseIn, animations: {
+            self.circleImageView.center = CGPoint(x: self.center.x + CGFloat(x), y: self.center.y + CGFloat(y))
+        }, completion: nil)
         // label.text = String(rawData.w0 + rawData.w1 + rawData.w2 + rawData.w3) + "kg"
     }
     
-}
-
-extension MainViewController: UIAdaptivePresentationControllerDelegate {
-    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-        
-    }
 }
