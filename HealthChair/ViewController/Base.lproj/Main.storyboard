@@ -375,8 +375,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="0NC-67-UMG"/>
                     <connections>
+                        <outlet property="activityTimeLabel" destination="wJ4-Yd-UfZ" id="tYg-ZN-exf"/>
                         <outlet property="circleImageView" destination="uep-nI-4VI" id="Zm0-3L-vNk"/>
                         <outlet property="circularview" destination="1dL-Tn-Tr2" id="7nJ-ZN-OVw"/>
+                        <outlet property="conditionTimeLabel" destination="S8P-q3-obX" id="2in-aY-zzG"/>
                         <outlet property="label" destination="k6F-ov-yap" id="sa4-s7-bm3"/>
                         <outlet property="realtimeCardView" destination="2os-Am-X1f" id="zfK-4s-zhE"/>
                         <outlet property="sittingCardView" destination="Atx-3S-3nE" id="rbE-ad-WGH"/>

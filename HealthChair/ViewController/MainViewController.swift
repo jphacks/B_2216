@@ -49,6 +49,9 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet var circleImageView: UIImageView!
     
+    @IBOutlet var activityTimeLabel: UILabel!
+    @IBOutlet var conditionTimeLabel: UILabel!
+    
     var sittingData = SittingData()
     var weightData = WeightData()
     
@@ -99,6 +102,7 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
                     self.sittingHourLabel.text = String(Int(self.sittingData.dailySum * 60) / 60)
                     self.sittingMinuteLabel.text = String(Int(self.sittingData.dailySum * 60) % 60)
                     // print(self.sittingData)
+                    self.activityTimeLabel.text = self.getDate()
                 }
             } catch {
                 print("error occured")
@@ -110,6 +114,7 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
                 await MainActor.run {
                     self.weightData = response
                     self.weightLabel.text = String(Int(self.weightData.dailyMean))
+                    self.conditionTimeLabel.text = self.getDate()
                     print(response)
                 }
             } catch {
@@ -146,6 +151,14 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBAction func calibrateTapped(_ sender: UITapGestureRecognizer){
         bluetoothManager.calibrate()
+    }
+    
+    func getDate() -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .none
+        formatter.timeStyle = .short
+        formatter.locale = Locale(identifier: "ja_JP")
+        return formatter.string(from: Date())
     }
 }
 
