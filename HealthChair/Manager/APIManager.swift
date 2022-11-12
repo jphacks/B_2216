@@ -23,38 +23,19 @@ class APIManager {
         case monthly = "/month/"
     }
     
-//    func requestUrl(){
-//        let urlString:String = baseUrl + "/data/sitting/today" + "/" + userId + "/"
-//        print("post url: ", urlString)
-//        let url = URL(string: urlString)!
-//        URLSession.shared.dataTask(with: url, completionHandler: {(data, response, error) in
-//            guard let data = data, error == nil else {
-//                print(error?.localizedDescription as Any)
-//                return
-//            }
-//            print("json got")
-//            let decoder = JSONDecoder()
-//            do {
-//                let responseData: [SittingUnit] = try decoder.decode([SittingUnit].self, from: data)
-//            } catch let parseError {
-//                print("JSON Error \(parseError.localizedDescription)")
-//            }
-//        })
-//        .resume()
-//    }
-    
     func requestSitting(sittingData: SittingData) async throws -> SittingData {
         var response = sittingData
         response = try await self.requestSingleSitting(sittingData: response, type: .daily)
         response = try await self.requestSingleSitting(sittingData: response, type: .weekly)
-        // response = try await self.requestSingleSitting(sittingData: response, type: .monthly)
+        response = try await self.requestSingleSitting(sittingData: response, type: .monthly)
         return response
     }
     
     func requestWeight(weightData: WeightData) async throws -> WeightData {
         var response = weightData
-        response = try await self.requestSingleWeight(weightData: weightData, type: .daily)
-        response = try await self.requestSingleWeight(weightData: weightData, type: .weekly)
+        response = try await self.requestSingleWeight(weightData: response, type: .daily)
+        response = try await self.requestSingleWeight(weightData: response, type: .weekly)
+        response = try await self.requestSingleWeight(weightData: response, type: .monthly)
         return response
     }
     

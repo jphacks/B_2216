@@ -14,18 +14,16 @@ class SittingTimeViewController: UIViewController {
     @IBOutlet var minuteLabel: UILabel!
     
     var sittingData: SittingData!
-    
-    enum Term: Int {
-        case daily = 0
-        case weekly = 1
-        case monthly = 2
-    }
-
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        setUpGraph(rawData: sittingData.dailyData)
+        setUpGraph(
+            rawData: sittingData.dailyData,
+            xFormatter: Formatter.DailyFormatter(),
+            yFormatter: Formatter.MinutesFormatter()
+        )
         updateUI(selectedType: .daily)
     }
     
@@ -33,7 +31,7 @@ class SittingTimeViewController: UIViewController {
         navigationItem.title = "座った時間"
     }
 
-    func setUpGraph(rawData: [SittingUnit]){
+    func setUpGraph<T:AxisValueFormatter,U:AxisValueFormatter>(rawData: [SittingUnit], xFormatter: T, yFormatter: U){
         let floatData: [Float] = rawData.map{ $0.hours * 60 }
         let entries = floatData.enumerated().map { BarChartDataEntry(x: Double($0.offset), y: Double($0.element)) }
         let dataSet = BarChartDataSet(entries: entries)
@@ -53,13 +51,13 @@ class SittingTimeViewController: UIViewController {
         barChartView.xAxis.gridColor = .systemGray3
         barChartView.xAxis.drawAxisLineEnabled = false
         barChartView.xAxis.labelFont = .boldSystemFont(ofSize: 14)
-        barChartView.xAxis.valueFormatter = HourFormatter()
+        barChartView.xAxis.valueFormatter = Formatter.DailyFormatter()
         
         barChartView.leftAxis.enabled = false
         barChartView.rightAxis.labelTextColor = .systemGray3
         barChartView.rightAxis.gridColor = .systemGray3
         barChartView.rightAxis.labelFont = .boldSystemFont(ofSize: 14)
-        barChartView.rightAxis.valueFormatter = MinutesFormatter()
+        barChartView.rightAxis.valueFormatter = Formatter.MinutesFormatter()
         
         barChartView.legend.enabled = false
         
@@ -71,33 +69,30 @@ class SittingTimeViewController: UIViewController {
         case .daily:
             self.hourLabel.text = String(Int(sittingData.dailySum * 60) / 60)
             self.minuteLabel.text = String(Int(sittingData.dailySum * 60) % 60)
-            setUpGraph(rawData: sittingData.dailyData)
+            setUpGraph(
+                rawData: sittingData.dailyData,
+                xFormatter: Formatter.DailyFormatter(),
+                yFormatter: Formatter.MinutesFormatter()
+            )
         case.weekly:
             self.hourLabel.text = String(Int(sittingData.weeklyMean * 60) / 60)
             self.minuteLabel.text = String(Int(sittingData.weeklyMean * 60) % 60)
-            setUpGraph(rawData: sittingData.weeklyData)
+            setUpGraph(rawData: sittingData.weeklyData,
+                       xFormatter: Formatter.WeeklyFormatter(),
+                       yFormatter: Formatter.MinutesFormatter())
         case .monthly:
             self.hourLabel.text = String(Int(sittingData.monthlyMean * 60) / 60)
             self.minuteLabel.text = String(Int(sittingData.weeklyMean * 60) % 60)
-            setUpGraph(rawData: sittingData.monthlyData)
+            setUpGraph(rawData: sittingData.monthlyData,
+                       xFormatter: Formatter.MonthlyFormatter(),
+                       yFormatter: Formatter.MinutesFormatter())
         }
     }
     
     @IBAction func segmentedControlSwitched(_ sender: UISegmentedControl) {
-        var type = Term(rawValue: sender.selectedSegmentIndex) ?? .daily
+        let type = Term(rawValue: sender.selectedSegmentIndex) ?? .daily
         updateUI(selectedType: type)
         print(sender.titleForSegment(at: sender.selectedSegmentIndex)!)
     }
 }
 
-public class HourFormatter: NSObject, AxisValueFormatter{
-    public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        return String(Int(value)) + ":00"
-    }
-}
-
-public class MinutesFormatter: NSObject, AxisValueFormatter{
-    public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        return String(Int(value)) + "分"
-    }
-}

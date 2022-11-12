@@ -11,6 +11,8 @@
 		C5129C13291E7ECC004213C8 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5129C12291E7ECC004213C8 /* NotificationService.swift */; };
 		C5129C17291E7ECC004213C8 /* NotificationService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C5129C10291E7ECC004213C8 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C5129C1F291E995C004213C8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5129C1E291E995C004213C8 /* Endpoint.swift */; };
+		C5129C21291F33FF004213C8 /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5129C20291F33FF004213C8 /* Term.swift */; };
+		C5129C23291F383F004213C8 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5129C22291F383F004213C8 /* Formatter.swift */; };
 		C514E3B628FBCC0500BBB4E6 /* sample_dairy.json in Resources */ = {isa = PBXBuildFile; fileRef = C514E3B428FBC97C00BBB4E6 /* sample_dairy.json */; };
 		C514E3B928FBDCF500BBB4E6 /* SittingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514E3B828FBDCF500BBB4E6 /* SittingData.swift */; };
 		C514E3BB28FC520000BBB4E6 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514E3BA28FC520000BBB4E6 /* WeightViewController.swift */; };
@@ -66,6 +68,8 @@
 		C5129C14291E7ECC004213C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5129C1C291E86A4004213C8 /* NotificationService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationService.entitlements; sourceTree = "<group>"; };
 		C5129C1E291E995C004213C8 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		C5129C20291F33FF004213C8 /* Term.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Term.swift; sourceTree = "<group>"; };
+		C5129C22291F383F004213C8 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		C514E3B428FBC97C00BBB4E6 /* sample_dairy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sample_dairy.json; sourceTree = "<group>"; };
 		C514E3B828FBDCF500BBB4E6 /* SittingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SittingData.swift; sourceTree = "<group>"; };
 		C514E3BA28FC520000BBB4E6 /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				C5129C1E291E995C004213C8 /* Endpoint.swift */,
+				C5129C22291F383F004213C8 /* Formatter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 				C5CE280D2903606800692FA0 /* SittingUnit.swift */,
 				C57A8A982913B3C6005B389A /* WeightData.swift */,
 				C57A8A9A2913B4B2005B389A /* WeightUnit.swift */,
+				C5129C20291F33FF004213C8 /* Term.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -406,8 +412,10 @@
 				C5CE280E2903606800692FA0 /* SittingUnit.swift in Sources */,
 				C514E3B928FBDCF500BBB4E6 /* SittingData.swift in Sources */,
 				C55AA5992902CFBE00F9307C /* UserDefaultsManager.swift in Sources */,
+				C5129C23291F383F004213C8 /* Formatter.swift in Sources */,
 				C52D13B228EDEC3700D44472 /* AppDelegate.swift in Sources */,
 				C593B56D28F16A7C006C10AC /* SittingTimeViewController.swift in Sources */,
+				C5129C21291F33FF004213C8 /* Term.swift in Sources */,
 				C52D13B428EDEC3700D44472 /* SceneDelegate.swift in Sources */,
 				C57A8A992913B3C6005B389A /* WeightData.swift in Sources */,
 			);

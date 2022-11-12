@@ -72,7 +72,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNk-3y-cdB" customClass="BarChartView" customModule="Charts">
-                                        <rect key="frame" x="16" y="127.33333333333334" width="358" height="295.66666666666663"/>
+                                        <rect key="frame" x="24" y="127.33333333333334" width="342" height="295.66666666666663"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
@@ -80,7 +80,7 @@
                                 <constraints>
                                     <constraint firstItem="dWe-A4-bUg" firstAttribute="leading" secondItem="vvr-H1-oa4" secondAttribute="leading" constant="8" id="DSB-1S-3ZI"/>
                                     <constraint firstItem="vvr-H1-oa4" firstAttribute="leading" secondItem="1Uy-81-DJ6" secondAttribute="leading" constant="16" id="Jam-ee-gOH"/>
-                                    <constraint firstItem="NNk-3y-cdB" firstAttribute="leading" secondItem="1Uy-81-DJ6" secondAttribute="leading" constant="16" id="Tek-v4-SkE"/>
+                                    <constraint firstItem="NNk-3y-cdB" firstAttribute="leading" secondItem="1Uy-81-DJ6" secondAttribute="leading" constant="24" id="Tek-v4-SkE"/>
                                     <constraint firstAttribute="bottom" secondItem="NNk-3y-cdB" secondAttribute="bottom" constant="16" id="U6R-g7-sUg"/>
                                     <constraint firstItem="zza-dw-A6c" firstAttribute="top" secondItem="dWe-A4-bUg" secondAttribute="bottom" id="WHr-6X-NlO"/>
                                     <constraint firstItem="vvr-H1-oa4" firstAttribute="top" secondItem="1Uy-81-DJ6" secondAttribute="top" constant="8" id="bDm-pd-vFK"/>
@@ -89,7 +89,7 @@
                                     <constraint firstAttribute="height" constant="439" id="lfF-cf-P37"/>
                                     <constraint firstItem="NNk-3y-cdB" firstAttribute="top" secondItem="abX-Zd-soB" secondAttribute="bottom" id="onU-vq-piq"/>
                                     <constraint firstItem="dWe-A4-bUg" firstAttribute="top" secondItem="vvr-H1-oa4" secondAttribute="bottom" constant="16" id="pNo-Mn-qhj"/>
-                                    <constraint firstAttribute="trailing" secondItem="NNk-3y-cdB" secondAttribute="trailing" constant="16" id="paF-50-sRV"/>
+                                    <constraint firstAttribute="trailing" secondItem="NNk-3y-cdB" secondAttribute="trailing" constant="24" id="paF-50-sRV"/>
                                     <constraint firstItem="abX-Zd-soB" firstAttribute="leading" secondItem="dWe-A4-bUg" secondAttribute="leading" id="qzG-YR-Ze0"/>
                                     <constraint firstItem="abX-Zd-soB" firstAttribute="top" secondItem="zza-dw-A6c" secondAttribute="bottom" id="vOz-MV-CW2"/>
                                 </constraints>

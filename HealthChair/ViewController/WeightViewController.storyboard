@@ -22,9 +22,13 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sKg-13-N2i">
                                         <rect key="frame" x="16" y="8" width="358" height="32"/>
                                         <segments>
+                                            <segment title="日"/>
                                             <segment title="週"/>
                                             <segment title="月"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="segmentedControlSwitched:" destination="gXL-9l-JFw" eventType="valueChanged" id="zNd-QS-JRf"/>
+                                        </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平均" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJa-pj-9cT">
                                         <rect key="frame" x="24" y="55" width="28.666666666666671" height="17"/>
@@ -56,7 +60,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uKE-gC-h4N" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="8" y="127.33333333333334" width="374" height="303.66666666666663"/>
+                                        <rect key="frame" x="24" y="127.33333333333334" width="350" height="303.66666666666663"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
@@ -67,13 +71,13 @@
                                     <constraint firstAttribute="bottom" secondItem="uKE-gC-h4N" secondAttribute="bottom" constant="8" id="83d-Xb-5es"/>
                                     <constraint firstAttribute="trailing" secondItem="sKg-13-N2i" secondAttribute="trailing" constant="16" id="9Kx-gL-dFH"/>
                                     <constraint firstItem="6Ig-fD-oJa" firstAttribute="leading" secondItem="GJa-pj-9cT" secondAttribute="leading" id="C8l-Op-voN"/>
-                                    <constraint firstAttribute="trailing" secondItem="uKE-gC-h4N" secondAttribute="trailing" constant="8" id="CHW-gC-Ejb"/>
+                                    <constraint firstAttribute="trailing" secondItem="uKE-gC-h4N" secondAttribute="trailing" constant="16" id="CHW-gC-Ejb"/>
                                     <constraint firstItem="sKg-13-N2i" firstAttribute="leading" secondItem="0YH-aN-3sU" secondAttribute="leading" constant="16" id="Ebb-hm-5pf"/>
                                     <constraint firstAttribute="height" constant="439" id="HGX-KL-21l"/>
                                     <constraint firstItem="uKE-gC-h4N" firstAttribute="top" secondItem="6Ig-fD-oJa" secondAttribute="bottom" id="KBd-hG-yBn"/>
                                     <constraint firstItem="5sK-KV-rPg" firstAttribute="leading" secondItem="GJa-pj-9cT" secondAttribute="leading" id="PE8-Oh-UXi"/>
                                     <constraint firstItem="GJa-pj-9cT" firstAttribute="leading" secondItem="sKg-13-N2i" secondAttribute="leading" constant="8" id="S2X-98-TWd"/>
-                                    <constraint firstItem="uKE-gC-h4N" firstAttribute="leading" secondItem="0YH-aN-3sU" secondAttribute="leading" constant="8" id="ULv-4X-39P"/>
+                                    <constraint firstItem="uKE-gC-h4N" firstAttribute="leading" secondItem="0YH-aN-3sU" secondAttribute="leading" constant="24" id="ULv-4X-39P"/>
                                     <constraint firstItem="GJa-pj-9cT" firstAttribute="top" secondItem="sKg-13-N2i" secondAttribute="bottom" constant="16" id="Y34-o5-MVA"/>
                                     <constraint firstItem="5sK-KV-rPg" firstAttribute="top" secondItem="GJa-pj-9cT" secondAttribute="bottom" id="oqz-an-7iN"/>
                                 </constraints>
@@ -89,6 +93,7 @@
                     </view>
                     <connections>
                         <outlet property="lineChartView" destination="uKE-gC-h4N" id="Nw9-me-doR"/>
+                        <outlet property="segmentedControl" destination="sKg-13-N2i" id="qzQ-Ci-aSd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="93w-jS-yx4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

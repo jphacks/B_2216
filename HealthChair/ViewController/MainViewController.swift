@@ -88,7 +88,7 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
                     self.sittingData = response
                     self.sittingHourLabel.text = String(Int(self.sittingData.dailySum * 60) / 60)
                     self.sittingMinuteLabel.text = String(Int(self.sittingData.dailySum * 60) % 60)
-                    print(self.sittingData)
+                    // print(self.sittingData)
                 }
             } catch {
                 print("error occured")
@@ -100,7 +100,7 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
                 await MainActor.run {
                     self.weightData = response
                     self.weightLabel.text = String(Int(self.weightData.dailyMean))
-                    print(self.weightData)
+                    print(response)
                 }
             } catch {
                 print("error occured")
