@@ -44,8 +44,8 @@ struct WeightData : Codable {
     var weeklyMean: Float = 0
     var monthlyMean: Float = 0
     
-    func getAllData(completion: @escaping (_ data :WeightData) -> Void) {
+    func getAllData() async throws -> WeightData {
         let apiManager = APIManager()
-        apiManager.requestWeight(weightData: self, completion: completion)
+        return try await apiManager.requestWeight(weightData: self)
     }
 }

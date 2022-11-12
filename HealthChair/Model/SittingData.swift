@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SittingData : Codable {
+struct SittingData {
     var dailyData: [SittingUnit] = [] {
         didSet {
             dailySum = 0
@@ -36,8 +36,8 @@ struct SittingData : Codable {
     var weeklyMean: Float = 0
     var monthlyMean: Float = 0
     
-    func getAllData(completion: @escaping (_ data :SittingData) -> Void) {
+    func getAllData() async throws -> SittingData {
         let apiManager = APIManager()
-        apiManager.requestSitting(sittingData: self, completion: completion)
+        return try await apiManager.requestSitting(sittingData: self)
     }
 }

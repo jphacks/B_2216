@@ -81,23 +81,31 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
             label.isHidden = false
         }
         
-        sittingData.getAllData(completion: { [weak self] sittingData in
-            guard let self = self else { return }
-            self.sittingData = sittingData
-            DispatchQueue.main.async {
-                self.sittingHourLabel.text = String(Int(sittingData.dailySum * 60) / 60)
-                self.sittingMinuteLabel.text = String(Int(sittingData.dailySum * 60) % 60)
+        Task.detached{
+            do {
+                let response = try await self.sittingData.getAllData()
+                await MainActor.run {
+                    self.sittingData = response
+                    self.sittingHourLabel.text = String(Int(self.sittingData.dailySum * 60) / 60)
+                    self.sittingMinuteLabel.text = String(Int(self.sittingData.dailySum * 60) % 60)
+                    print(self.sittingData)
+                }
+            } catch {
+                print("error occured")
             }
-            print(sittingData)
-        })
-        weightData.getAllData(completion: { [weak self] weightData in
-            guard let self = self else { return }
-            self.weightData = weightData
-            DispatchQueue.main.async {
-                self.weightLabel.text = String(Int(weightData.dailyMean))
+        }
+        Task.detached{
+            do {
+                let response = try await self.weightData.getAllData()
+                await MainActor.run {
+                    self.weightData = response
+                    self.weightLabel.text = String(Int(self.weightData.dailyMean))
+                    print(self.weightData)
+                }
+            } catch {
+                print("error occured")
             }
-            print(weightData)
-        })
+        }
     }
 
     @objc func sittingCardViewTapped(_ sender: UITapGestureRecognizer) {
