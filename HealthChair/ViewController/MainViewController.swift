@@ -175,9 +175,18 @@ extension MainViewController: BluetoothManagerDelegate {
         let weight = CGFloat(rawData.w0 + rawData.w1 + rawData.w2 + rawData.w3)
         circularview.value = weight
         let sum = rawData.w0 + rawData.w1 + rawData.w2 + rawData.w3 + 25.0
-        let radius: Float = 50.0
-        let x = (rawData.w0 + rawData.w1 - rawData.w2 - rawData.w3) * radius / sum
-        let y = (rawData.w0 - rawData.w1 - rawData.w2 + rawData.w3) * radius / sum
+        let radius: Float = 400.0
+        var x = (rawData.w0 + rawData.w1 - rawData.w2 - rawData.w3) * radius / sum
+        var  y = (rawData.w0 - rawData.w1 - rawData.w2 + rawData.w3) * radius / sum
+        let r2 = x * x + y * y
+        if r2 > 8000 {
+            circleImageView.tintColor = .red
+            x = x * sqrt(13000 / r2)
+            y = y * sqrt(13000 / r2)
+        } else {
+            circleImageView.tintColor = .blue
+        }
+        print(r2)
         UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseIn, animations: {
             self.circleImageView.center = CGPoint(x: self.center.x + CGFloat(x), y: self.center.y + CGFloat(y))
         }, completion: nil)

@@ -31,7 +31,7 @@
         <scene sceneID="DiR-5a-kc6">
             <objects>
                 <viewController id="zcp-Iy-1Vb" customClass="MainViewController" customModule="HealthChair" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="FWc-B2-sf0">
+                    <view key="view" contentMode="scaleToFill" id="FWc-B2-sf0">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
